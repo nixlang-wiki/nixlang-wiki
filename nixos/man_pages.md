@@ -2,7 +2,7 @@
 title: Manual Pages
 description: 
 published: true
-date: 2023-11-26T18:54:00.178Z
+date: 2023-11-26T18:54:07.077Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T17:24:15.492Z
