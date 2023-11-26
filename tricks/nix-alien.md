@@ -2,7 +2,7 @@
 title: Nix Alien
 description: 
 published: true
-date: 2023-11-26T19:52:56.475Z
+date: 2023-11-26T19:53:50.663Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T19:50:57.176Z
@@ -60,7 +60,7 @@ Now, this is the part where `nix-alien` comes to save the day.
 nix run github:thiagokokada/nix-alien -- ./bsd-csh
 ```
 
-And now, we're presented with a original `csh`. Very cool.
+And now, we're presented with an original `csh`. Very cool.
 
 [^1]: We can't advise actually reading that trash.
 [^2]: It could have it, consider taking up https://github.com/NixOS/nixpkgs/pull/260470
