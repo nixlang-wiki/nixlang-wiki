@@ -2,7 +2,7 @@
 title: Nix Alien
 description: 
 published: true
-date: 2023-11-26T19:52:16.456Z
+date: 2023-11-26T19:52:56.475Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T19:50:57.176Z
@@ -15,7 +15,7 @@ dateCreated: 2023-11-26T19:50:57.176Z
 
 Let's say you're reading the unix-haters handbook, and get intrigued by the crude jokes made with `csh`[^1]. Only later do you discover, now present at your NixOS box, that nixpkgs doesn't have any *true* `csh`[^2].
 
-What to do! Building `csh` from source on Linux is — mildly put, annoying — and while a flake for `csh` existing would be great, the task has yet found a hacker with the spoons to get it done.
+What to do! Building `csh` from source on Linux is — mildly put — annoying. While a flake for `csh` existing would be great, the task has yet found a hacker with the spoons to get it done.
 
 Instead, you could just use a precompiled binary, and where else to get it but debian.
 
