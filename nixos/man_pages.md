@@ -2,13 +2,52 @@
 title: Manual Pages
 description: 
 published: true
-date: 2023-11-26T17:25:43.749Z
+date: 2023-11-26T18:51:30.458Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T17:24:15.492Z
 ---
 
 # Manual Pages
+
+Manual pages allows the user to easily get documentation for their programs in a simple, universal way.
+
+## Some sane defaults
+
+```nix
+# Whether to install manual pages. This also includes man outputs.
+documentation.man.enable = true;
+
+# Whether to install NixOS’s own documentation.
+#
+# - This includes man pages like configuration.nix(5) if
+#   documentation.man.enable is set.
+# - This includes the HTML manual and the nixos-help command if
+#   documentation.doc.enable is set.
+documentation.nixos.enable = true;
+
+# Whether to install documentation targeted at developers.
+#
+# - This includes man pages targeted at developers if documentation.man.enable
+#   is set (this also includes “devman” outputs).
+# - This includes info pages targeted at developers if
+#   documentation.info.enable is set (this also includes 
+#   “devinfo” outputs).
+# - This includes other pages targeted at developers if
+#   documentation.doc.enable is set (this also includes 
+#   “devdoc” outputs).
+documentation.dev.enable = true;
+
+# Whether to install info pages and the info command. This also includes “info”
+# outputs.
+documentation.info.enable = true;
+```
+
+## configuration.nix
+
+By enabling `documentation.nixos.enable = true;`, you get access to `man 5 configuration.nix`.
+
+This is a list of all the configuration options made available via NixOS, and can be valuable, specially if you don't have access to the internet.
 
 ## Faster manual pages
 
