@@ -2,7 +2,7 @@
 title: Manual Pages
 description: 
 published: true
-date: 2023-11-26T18:51:30.458Z
+date: 2023-11-26T18:54:00.178Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T17:24:15.492Z
@@ -84,4 +84,20 @@ systemd = {
       RandomizedDelaySec = 1800;
     };
   };
+```
+
+## For kernel hackers
+
+Any good kernel hacker or systems programmer will know having acces to manpages for Linux syscalls is imperative to efficient development.
+
+There are quite a few manpages worth installing for these purposes, here is a list of those often found useful.
+
+```nix
+  environment.systemPackages = with pkgs; [
+    linux-manual
+    man-pages
+    man-pages-posix
+    stdman
+    stdmanpages
+  ];
 ```
