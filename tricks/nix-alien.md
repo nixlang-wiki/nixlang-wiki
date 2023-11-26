@@ -2,7 +2,7 @@
 title: Nix Alien
 description: 
 published: true
-date: 2023-11-26T19:53:50.663Z
+date: 2023-11-26T19:54:14.647Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T19:50:57.176Z
