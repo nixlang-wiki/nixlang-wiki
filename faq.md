@@ -2,7 +2,7 @@
 title: Frequently Asked Questions
 description: 
 published: true
-date: 2023-11-27T13:55:24.726Z
+date: 2023-11-27T14:01:53.225Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-27T13:45:15.039Z
@@ -45,3 +45,8 @@ You're free to express yourself withing the boundaries of our code of conduct. H
 
 If you're looking for a less moderated project you shouldn't have a hard time finding one. Let us keep our moderated ones in peace at least.
 
+## How are you hosting this
+
+It's hosted as part of the kubernetes cluster initially deployed for https://rime.cx. We use traefik as a reverse proxy so we can have a lot of domains for the same cluster.
+
+You can see uptime info at https://uptime.nixlang.wiki.
