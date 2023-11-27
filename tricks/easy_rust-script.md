@@ -2,13 +2,15 @@
 title: Rust Script Shebang
 description: 
 published: true
-date: 2023-11-26T17:36:00.929Z
+date: 2023-11-27T05:09:56.228Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T17:35:58.546Z
 ---
 
 # Rust Script Shebang
+> This section requires [enabling flakes](/nix/experimental_features#enabling-flakes).
+
 For users of Nix who have enabled the experimental features `flakes` and `nix-command`, one cool trick to write simple `rust-script` files is the following.
 
 ```rust
