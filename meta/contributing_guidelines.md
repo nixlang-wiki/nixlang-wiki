@@ -2,7 +2,7 @@
 title: Contributing Guidelines
 description: 
 published: true
-date: 2023-11-27T05:31:15.933Z
+date: 2023-11-27T20:23:11.747Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-27T05:31:15.933Z
@@ -22,7 +22,7 @@ Further this also makes it easier to read the plaintext for people browsing via 
 
 ## Moderation
 
-We expect every contributor to follow the [code_of_conduct](/meta/code_of_conduct) on all of nixlan.wiki and the various spaces where we develop it.
+We expect every contributor to follow the [code_of_conduct](/meta/code_of_conduct) on all of nixlang.wiki and the various spaces where we develop it.
 
 ## Hacking
 
