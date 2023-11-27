@@ -2,14 +2,14 @@
 title: Installing Packages from Flakes
 description: For your NixOS config
 published: true
-date: 2023-11-27T07:03:04.788Z
+date: 2023-11-27T07:04:06.261Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-27T07:03:04.788Z
 ---
 
 # Installing Packages from Flakes
-While installing packages from nixpkgs can ofen be a breaze, due to the *experimental* nature of flakes, there is a lack of documentation and beaten path of installing packages from flake repos to your system configuration.
+While installing packages from nixpkgs can often be a breeze, due to the *experimental* nature of flakes, there is a lack of documentation and beaten path of installing packages from flake repos to your system configuration.
 
 ## Example - Installing eza from the flake repo
 
@@ -17,7 +17,7 @@ Here, we'll demonstrate installing [eza](https://github.com/cafkafk/eza) from th
 
 In order to install packages from flakes, you'll first need to be using flakes. . You're likely doing that if you have a `flake.nix` file as part of your config.
 
-You'd also be smart to enable the nescesarry [experimental features](/nix/experimental_features#enabling-flakes).
+You'd also be smart to enable the necessary [experimental features](/nix/experimental_features#enabling-flakes).
 
 Once that is done, the first step is to add `eza` to your flake inputs in `flake.nix`.
 
