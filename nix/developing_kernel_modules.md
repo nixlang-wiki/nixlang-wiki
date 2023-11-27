@@ -2,7 +2,7 @@
 title: Developing Kernenl Modules with Nix
 description: 
 published: true
-date: 2023-11-27T11:43:52.704Z
+date: 2023-11-27T12:09:39.910Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-27T11:43:52.704Z
@@ -58,7 +58,16 @@ module_init(hello_init);
 module_exit(hello_exit);
 ```
 
-Now, we can just create a `Makefile` that looks like this.
+Now, we simply run two commands.
+
+```bash
+nix shell nixpkgs#gnumake nixpkgs#linux.dev
+LINUX_VERSION=linux_6_5 make -C $(nix-build -E "(import <nixpkgs> {}).$LINUX_VERSION.dev" --no-out-link)/lib/modules/*/build M=$(pwd) modules
+```
+
+And now we can `insmod hello_nix.o` to insert the kernel module. We can verify this is working by watching `dmesg --follow`.
+
+We can also create a `Makefile` to make this easier for us in the future. It would look like this.
 
 ```makefile
 TARGET=hello_nix
@@ -88,4 +97,8 @@ clean:
 dmesg:
     dmesg --ctime --color=auto --follow
 ```
+
+As you can see, there is quite a lot of cleanup associated with kernel hacking.
+
+### Kernel Module Flakes
 
