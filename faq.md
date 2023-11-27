@@ -2,7 +2,7 @@
 title: Frequently Asked Questions
 description: 
 published: true
-date: 2023-11-27T13:52:38.286Z
+date: 2023-11-27T13:53:57.893Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-27T13:45:15.039Z
@@ -10,6 +10,16 @@ dateCreated: 2023-11-27T13:45:15.039Z
 
 # Frequently Asked Questions
 A list of frequently asked questions.
+
+## Why Create yet Another Wiki
+
+Well, for starters, our understanding is that https://nixos.wiki isn't getting updated anymore. We've heard various rumors about the reasons for this being the case, and while we find them concerning, we'd feel it was in bad taste to share them publicly. 
+
+Suffice to say, it seems nescesarry to create a new active wiki.
+
+Part of our goals is also to make this wiki easy to fork, which is why we keep a git repo of all articles. This is to help make the wiki less centralized, and more independent.
+
+Further, we'd like to create a broarder wiki, and we'd like to open it up to projects that share our values (see [project category explanation](/projects/info) for more).
 
 ## Why Not use Mediawiki
 
@@ -22,14 +32,6 @@ Further, the next major version of wiki.js will bring the ability to import medi
 ## The Name Sucks
 
 That's not a question... and we actually don't think so. Consider that most useful domain names that are resonably short and memorable have already been taken. Nix Lang might allude to the Nix Language, but then that is exactly what unites NixOS and Nix package manager users isn't it?
-
-## Why Create yet Another Wiki
-
-Well, for starters, our understanding is that https://nixos.wiki isn't getting updated anymore. We've heard various rumors about the reasons for this being the case, and while we find them concerning, we'd feel it was in bad taste to share them publicly. 
-
-Suffice to say, it seems nescesarry to create a new active wiki.
-
-Part of our goals is also to make this wiki easy to fork, which is why we keep a git repo of all articles. This is to help make the wiki less centralized, and more independent.
 
 ## Why not be a part of the Nix Documentation Team
 
