@@ -2,7 +2,7 @@
 title: Nix Alien
 description: 
 published: true
-date: 2023-11-26T19:54:14.647Z
+date: 2023-11-27T05:09:29.850Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T19:50:57.176Z
@@ -12,6 +12,9 @@ dateCreated: 2023-11-26T19:50:57.176Z
 [Nix Alien](https://github.com/thiagokokada/nix-alien) is a very useful utility for running unpatched binaries on Nix/NixOS.
 
 ## Running Dubious Debian Binaries
+
+> This section requires [enabling flakes](/nix/experimental_features#enabling-flakes).
+{.is-info}
 
 Let's say you're reading the unix-haters handbook, and get intrigued by the crude jokes made with `csh`[^1]. Only later do you discover, now present at your NixOS box, that nixpkgs doesn't have any *true* `csh`[^2].
 
