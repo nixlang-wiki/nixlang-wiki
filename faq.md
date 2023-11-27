@@ -2,7 +2,7 @@
 title: Frequently Asked Questions
 description: 
 published: true
-date: 2023-11-27T13:53:57.893Z
+date: 2023-11-27T13:54:27.511Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-27T13:45:15.039Z
@@ -37,7 +37,7 @@ That's not a question... and we actually don't think so. Consider that most usef
 
 Because the documentation team is writing documentation, we're writing a wiki. We think that the Nix documentation is already at least decent, but what's lacking is just more down to earth examples of how to actually use nix.
 
-You can look up nearly anything about nix at this point, but without knowing what to look up, that doesn't matter.
+You can look up nearly anything about nix at this point, but without knowing what to look up, that doesn't matter. We're hoping to be part of fixing that.
 
 ## Why do you have a code of conduct, what about free speach
 
