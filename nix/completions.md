@@ -2,7 +2,7 @@
 title: Packaging Command Completions
 description: How to deal with completion files for nix packages
 published: true
-date: 2023-11-29T07:36:04.626Z
+date: 2023-11-29T07:36:21.420Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-29T07:36:04.626Z
@@ -33,8 +33,6 @@ rustPlatform.buildRustPackage rec {
 }
 ```
 
-While `installShellCompletions` should be able to infer the completions types most of the time, it's more readable to explicitly
-
-
+While `installShellCompletions` should be able to infer the completions types most of the time, it's more readable to explicitly specify them.
 
 [^1]: Although adding completions for additonal shells could be easyly done.
