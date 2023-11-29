@@ -2,13 +2,13 @@
 title: Packaging Command Completions
 description: How to deal with completion files for nix packages
 published: true
-date: 2023-11-29T07:36:21.420Z
+date: 2023-11-29T07:36:45.369Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-29T07:36:04.626Z
 ---
 
-# Packaging command completions
+# Packaging with Command Completions
 Most modern shell supports completions. Currently, NixOS, or really nixpkgs on which much of NixOS relies, supports completions for just `bash`, `zsh`, and `fish`[^1].
 
 Of primary importance to installing completions is the function `installShellCompletions` from nixpkgs, which is part of the [`installShellFiles` hook](https://github.com/NixOS/nixpkgs/blob/9640178ef2f02e9b2c7bff62f7bd407c3773bdf6/doc/hooks/installShellFiles.section.md#L1).
