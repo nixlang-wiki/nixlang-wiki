@@ -2,13 +2,13 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-11-27T05:25:10.544Z
+date: 2023-11-29T08:11:36.033Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
 ---
 
-# Welcome to nixlang.wiki
+# Welcome to the Unofficial nixlang.wiki
 Let's document Nix, NixOS, and all things inbetween.
 
 ![nixlang-header-crop.jpg](/nixlang-header-crop.jpg)
