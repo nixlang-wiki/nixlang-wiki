@@ -2,7 +2,7 @@
 title: Sagemath
 description: Symbolic Mathematics tool based on Python
 published: true
-date: 2023-11-29T13:31:36.821Z
+date: 2023-11-29T13:31:40.444Z
 tags: package, python, math, scientificcomputing
 editor: markdown
 dateCreated: 2023-11-26T17:19:37.457Z
