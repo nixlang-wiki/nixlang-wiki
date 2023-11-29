@@ -2,7 +2,7 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-11-29T08:11:36.033Z
+date: 2023-11-29T20:59:18.371Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
@@ -23,6 +23,9 @@ The Nixpkgs manual: https://nixos.org/manual/nixpkgs/stable/
 The official NixOS learning resource: https://nix.dev/
 Determinate Systems' zero-to-nix: https://zero-to-nix.com/
 On Nix's Language: https://tales.mbivert.com/on-nix-language/
+NixOS & Flakes Book: https://nixos-and-flakes.thiscute.world/
+NixOS in Production: https://leanpub.com/nixos-in-production
+Wombat’s Book of Nix: https://mhwombat.codeberg.page/nix-book/
 
 ## Other Wikis
 Unofficial NixOS Wiki: https://nixos.wiki
