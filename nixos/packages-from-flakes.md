@@ -2,7 +2,7 @@
 title: Installing Packages from Flakes
 description: For your NixOS config
 published: true
-date: 2023-11-29T12:11:52.369Z
+date: 2023-11-29T12:22:21.674Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-27T07:03:04.788Z
@@ -47,7 +47,8 @@ Next, ensure that `inputs` are passed into the module system in your `flake.nix`
 }
 ```
 
-(If you use standalone home-manager, use `extraSpecialArgs` instead of `specialArgs`.)
+> If you use standalone home-manager, use `extraSpecialArgs` instead of `specialArgs`.
+{.is-warning}
 
 Finally, we add the package *somewhere* in our configuration.
 
