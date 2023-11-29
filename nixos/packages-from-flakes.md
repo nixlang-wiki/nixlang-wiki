@@ -2,7 +2,7 @@
 title: Installing Packages from Flakes
 description: For your NixOS config
 published: true
-date: 2023-11-29T12:05:12.136Z
+date: 2023-11-29T12:09:55.016Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-27T07:03:04.788Z
@@ -40,8 +40,8 @@ Next, ensure that `inputs` are passed into the module system in your `flake.nix`
   #...
   outputs: {nixpkgs, eza, self, ...}@inputs : {
     nixosConfigurations.myhost = nixpkgs.lib.nixosSystem {
-    specialArgs = { inherit inputs; };
-    #...
+      specialArgs = { inherit inputs; };
+      #...
   };
 }
 ```
