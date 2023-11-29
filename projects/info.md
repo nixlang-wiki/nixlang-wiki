@@ -2,7 +2,7 @@
 title: Info About the Project Category
 description: 
 published: true
-date: 2023-11-27T05:37:26.502Z
+date: 2023-11-29T17:13:25.759Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-27T05:37:26.502Z
