@@ -2,7 +2,7 @@
 title: Frequently Asked Questions
 description: 
 published: true
-date: 2023-11-27T14:01:53.225Z
+date: 2023-11-29T07:54:51.177Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-27T13:45:15.039Z
@@ -50,3 +50,11 @@ If you're looking for a less moderated project you shouldn't have a hard time fi
 It's hosted as part of the kubernetes cluster initially deployed for https://rime.cx. We use traefik as a reverse proxy so we can have a lot of domains for the same cluster.
 
 You can see uptime info at https://uptime.nixlang.wiki.
+
+## Why isn't nixlang.wiki limited to just Nix topics
+
+Why should we arbirarily limit it like that, when we could instead allow documenting anything that could be useful to a Nix user?
+
+One of the great advantages of the Arch Linux wiki is that it has a very broad amount of topics, and if you're an arch user, having all that information, but with a slant specifically towards arch usage is a superpower.
+
+There is no reason we shouldn't be able to have nice stuff like that, we're a big distro.
