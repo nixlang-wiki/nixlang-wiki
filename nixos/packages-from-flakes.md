@@ -2,7 +2,7 @@
 title: Installing Packages from Flakes
 description: For your NixOS config
 published: true
-date: 2023-11-27T07:04:06.261Z
+date: 2023-11-29T12:02:15.362Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-27T07:03:04.788Z
@@ -27,16 +27,28 @@ Once that is done, the first step is to add `eza` to your flake inputs in `flake
   	nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     eza = {
       url = "github:eza-community/eza";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     ...
   };
 }
 ```
 
-Notice here that we add `inputs.nixpkgs.follows = "nixpkgs"`, which will make sure that the `nixpkgs` in `eza` follows our `nixpkgs` input, instead of the one specified in `eza`'s `flake.lock` file, which might be a different version than the one we have.
+Next, ensure that `inputs` are passed into the module system in your `flake.nix`:
 
-Next, we just add the package *somewhere* in our configuration.
+```nix
+{
+  ...
+  outputs: {nixpkgs, eza, self, ...}@inputs : {
+    nixosConfigurations.myhost = nixpkgs.lib.nixosSystem {
+    specialArgs = { inherit inputs; };
+    ...
+  };
+}
+```
+
+(If you use standalone home-manager, use `extraSpecialArgs` instead of `specialArgs`.)
+
+Finally, we just add the package *somewhere* in our configuration.
 
 ```nix
 {
