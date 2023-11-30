@@ -2,7 +2,7 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-11-30T06:18:07.557Z
+date: 2023-11-30T06:21:22.241Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
@@ -60,3 +60,7 @@ nixos.wiki outlines the rather bumpy history of creating NixOS wikis: https://ni
 ### Come Chat on Matrix
 
 <a href="https://matrix.to/#/#nixlangwiki:gitter.im"><img alt="Gitter" src="https://img.shields.io/gitter/room/eza-community/eza?logo=element&link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23eza%3Agitter.im&link=Gitter%20matrix%20room%20for%20Eza" width=200></a>
+
+### Contributing
+[contributing_guidelines](/meta/contributing_guidelines)
+[code_of_conduct](/meta/code_of_conduct)
