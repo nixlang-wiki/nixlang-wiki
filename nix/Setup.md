@@ -2,7 +2,7 @@
 title: Setup
 description: How to set up the Nix package manager without NixOS
 published: true
-date: 2023-11-30T05:22:51.990Z
+date: 2023-11-30T05:32:57.859Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T05:21:40.477Z
@@ -15,7 +15,7 @@ https://nixos.org/download.html
 
 ## Configuration Files
 
-A common structure is to put all of your nix configuration files in a git repository, and then symlink them to where they are used.
+A common structure is to put all of your nix configuration files in a git repository to keep track of them, and then symlink them to where they are used.
 
 A script setting up these symlinks could look like this:
 ``` bash
