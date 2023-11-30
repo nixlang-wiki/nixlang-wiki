@@ -2,7 +2,7 @@
 title: New Landing Page
 description: 
 published: true
-date: 2023-11-30T14:29:11.768Z
+date: 2023-11-30T14:32:49.858Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T14:24:49.313Z
@@ -11,7 +11,7 @@ dateCreated: 2023-11-30T14:24:49.313Z
 # Welcome to the Unofficial nixlang.wiki
 Let's document Nix, NixOS, and all things inbetween.
 
-![nixlang-header-crop.jpg](/nixlang-header-crop.jpg)
+![nixlang-header-crop2.jpg](/nixlang-header-crop2.jpg)
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-start; flex-grow: 4;">
 
