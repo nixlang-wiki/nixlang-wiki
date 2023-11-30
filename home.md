@@ -2,7 +2,7 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-11-30T04:34:08.458Z
+date: 2023-11-30T04:37:16.855Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
@@ -46,6 +46,8 @@ Unofficial NixOS Wiki: https://nixos.wiki
 Archive of the defunct official wiki: https://web.archive.org/web/20170830114339/https://nixos.org/~eelco/wiki-20160212.xml.gz
 
 ## 3. About the Wiki
+
+[Frequently Asked Questions](/faq)
 
 ### You WOULD download this wiki
 ...or the contents of it. Currently, nixlang.wiki is automatically backed up to a git repository every five minutes https://github.com/nixlang-wiki/nixlang-wiki.
