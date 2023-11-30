@@ -2,7 +2,7 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-11-30T04:37:16.855Z
+date: 2023-11-30T05:25:37.983Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
@@ -19,7 +19,7 @@ Let's document Nix, NixOS, and all things inbetween.
 
 NixOS Quick Start (TODO: make page)
 
-Nix on Ubuntu (TODO: make page)
+[Standalone Nix Setup](/nix/Setup)
 
 ### The Basics
 
@@ -42,7 +42,7 @@ NixOS in Production: https://leanpub.com/nixos-in-production
 Wombat’s Book of Nix: https://mhwombat.codeberg.page/nix-book/
 
 ### Other Wikis
-Unofficial NixOS Wiki: https://nixos.wiki
+Unofficial NixOS Wiki (Deprecated): https://nixos.wiki
 Archive of the defunct official wiki: https://web.archive.org/web/20170830114339/https://nixos.org/~eelco/wiki-20160212.xml.gz
 
 ## 3. About the Wiki
