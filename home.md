@@ -2,7 +2,7 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-11-30T14:10:01.165Z
+date: 2023-11-30T14:10:15.682Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
@@ -12,16 +12,6 @@ dateCreated: 2023-11-26T15:53:10.293Z
 Let's document Nix, NixOS, and all things inbetween.
 
 ![nixlang-header-crop.jpg](/nixlang-header-crop.jpg)
-
-<div style="display: flex; flex-wrap: wrap; flex-basis: 33%;">
-
-<div id="nix-news" style="">
-
-## NixOS News
-  
-- NixOS version 23.11 Released! [Read Announcement.](https://discourse.nixos.org/t/nixos-23-11-released/36210)
-  
-</div>
 
 ## 1. Nix and NixOS
 
