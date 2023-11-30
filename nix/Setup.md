@@ -1,8 +1,8 @@
 ---
-title: Nix Setup
+title: Setup
 description: How to set up the Nix package manager without NixOS
 published: true
-date: 2023-11-30T05:21:40.477Z
+date: 2023-11-30T05:22:51.990Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T05:21:40.477Z
