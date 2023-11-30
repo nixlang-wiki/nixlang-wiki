@@ -2,7 +2,7 @@
 title: New Landing Page
 description: 
 published: true
-date: 2023-11-30T14:39:21.664Z
+date: 2023-11-30T14:40:45.178Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T14:24:49.313Z
