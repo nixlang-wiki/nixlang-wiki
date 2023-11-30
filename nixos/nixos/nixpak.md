@@ -2,7 +2,7 @@
 title: Nixpak
 description: Sandboxing tool based on flatpak for NixOS
 published: true
-date: 2023-11-30T15:34:47.539Z
+date: 2023-11-30T15:36:25.750Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T15:18:55.188Z
