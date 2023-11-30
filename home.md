@@ -2,7 +2,7 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-11-30T14:53:15.576Z
+date: 2023-11-30T14:54:58.203Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
@@ -19,14 +19,16 @@ dateCreated: 2023-11-26T15:53:10.293Z
 ## Beginners
 ### Nix/NixOS Setup
 
-[NixOS Quick Start](/nixos/Quick_Start)
+Start with our [NixOS Quick Start](/nixos/Quick_Start) (Work in progress)
 
-[Standalone Nix Setup](/nix/Setup)
+Learn to setup [Standalone Nix](/nix/Setup)
   
   
 ### The Basics
-
-[The useful `nix run` command](/nix/nix_run)
+  
+How to [enable flakes](/nix/experimental_features).
+  
+The useful [`nix run` command](/nix/nix_run).
   
 </div>
   
