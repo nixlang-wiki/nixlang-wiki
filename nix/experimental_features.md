@@ -2,7 +2,7 @@
 title: Experimental Nix Features
 description: 
 published: true
-date: 2023-11-27T04:46:29.117Z
+date: 2023-11-30T05:36:45.042Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-27T04:46:29.117Z
@@ -10,7 +10,7 @@ dateCreated: 2023-11-27T04:46:29.117Z
 
 # Experimental Nix Features
 
-> These features are labeled experimental. The accuracy of these being experimental varies by featur however. If you wanna reasure yourself that flakes are stable, determinate systems, a company founded by the guy that created ofborg, and currently employs the guy that created Nix in the first place [has this to say about flakes stability](https://determinate.systems/posts/experimental-does-not-mean-unstable).
+> These features are labeled experimental. The accuracy of these being experimental varies by feature however. If you wanna reasure yourself that flakes are stable, determinate systems, a company founded by the guy that created ofborg, and currently employs the guy that created Nix in the first place [has this to say about flakes stability](https://determinate.systems/posts/experimental-does-not-mean-unstable).
 {.is-info}
 
 Experimental features are a way for *unstable* and *controversial* features to be opt-in. While many experimental features might be highly useful, the documentation for each feature varies greatly.
