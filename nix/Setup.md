@@ -2,7 +2,7 @@
 title: Setup
 description: How to set up the Nix package manager without NixOS
 published: true
-date: 2023-11-30T05:35:02.648Z
+date: 2023-11-30T06:24:31.792Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T05:21:40.477Z
@@ -69,7 +69,7 @@ in {
 
 Used to set global nix settings
 
-For example, use this if you are using a stable version of Nix, and want to enable flakes (TODO: link to main flakes page):
+For example, use this if you are using a stable version of Nix, and want to enable [flakes](/nix/Flakes):
 
 ``` conf
 extra-experimental-features = nix-command flakes
