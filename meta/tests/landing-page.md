@@ -2,7 +2,7 @@
 title: New Landing Page
 description: 
 published: true
-date: 2023-11-30T14:36:33.470Z
+date: 2023-11-30T14:38:05.925Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T14:24:49.313Z
@@ -36,7 +36,7 @@ Let's document Nix, NixOS, and all things inbetween.
   
 </div>
   
-<div id="nix-news" class="landing-item">
+<div id="nix-news" class="landing-item" style="background: gray; border: black;">
 
 ## NixOS News
   
