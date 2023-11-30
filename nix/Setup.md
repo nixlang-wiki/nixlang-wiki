@@ -2,7 +2,7 @@
 title: Setup
 description: How to set up the Nix package manager without NixOS
 published: true
-date: 2023-11-30T06:24:31.792Z
+date: 2023-11-30T14:54:29.837Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T05:21:40.477Z
@@ -64,6 +64,8 @@ in {
 }
 
 ```
+
+Home Manager options search page: https://mipmip.github.io/home-manager-option-search/
 
 ### nix.conf
 
