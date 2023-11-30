@@ -2,7 +2,7 @@
 title: New Landing Page
 description: 
 published: true
-date: 2023-11-30T14:27:20.558Z
+date: 2023-11-30T14:29:11.768Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T14:24:49.313Z
@@ -15,16 +15,8 @@ Let's document Nix, NixOS, and all things inbetween.
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-start; flex-grow: 4;">
 
-<div id="nix-news" style="flex-basis: 33%;">
 
-## NixOS News
-  
-- NixOS version 23.11 Released! [Read Announcement.](https://discourse.nixos.org/t/nixos-23-11-released/36210)
-  
-</div>
-  
-
-<div  style="flex-basis: 33%;">
+<div  style="flex-basis: 33%; margin-bottom: 1em;">
   
 ## Setup
 
@@ -34,7 +26,16 @@ Let's document Nix, NixOS, and all things inbetween.
   
 </div>
 
-<div style="flex-basis: 33%;">
+<div id="nix-news" style="flex-basis: 33%;  margin-bottom: 1em;">
+
+## NixOS News
+  
+- NixOS version 23.11 Released! [Read Announcement.](https://discourse.nixos.org/t/nixos-23-11-released/36210)
+  
+</div>
+    
+
+<div  style="flex-basis: 33%; margin-bottom: 1em;">
   
 ## The Basics
 
@@ -42,7 +43,7 @@ Let's document Nix, NixOS, and all things inbetween.
   
 </div>
   
-<div style="flex-basis: 33%;">
+<div  style="flex-basis: 33%; margin-bottom: 1em;">
   
 
 ## Official NixOS documentation
@@ -52,7 +53,7 @@ The Nixpkgs manual: https://nixos.org/manual/nixpkgs/stable/
   
 </div>
 
-<div style="flex-basis: 33%;">
+<div  style="flex-basis: 33%; margin-bottom: 1em;">
   
 ## NixOS learning resources
 
@@ -65,7 +66,7 @@ Wombat’s Book of Nix: https://mhwombat.codeberg.page/nix-book/
   
 </div>
 
-<div style="flex-basis: 33%;">
+<div  style="flex-basis: 33%; margin-bottom: 1em;">
   
 ## Other Wikis
 Unofficial NixOS Wiki (Deprecated): https://nixos.wiki
@@ -76,7 +77,7 @@ Archive of the defunct official wiki: https://web.archive.org/web/20170830114339
   
 </div>
 
-<div style="flex-basis: 33%;"> 
+<div  style="flex-basis: 33%; margin-bottom: 1em;">
 
 ## You WOULD download this wiki
 ...or the contents of it. Currently, nixlang.wiki is automatically backed up to a git repository every five minutes https://github.com/nixlang-wiki/nixlang-wiki.
@@ -85,7 +86,7 @@ This has the dual purpose of making it a little less centralized, and making it 
 
 </div>
 
-<div style="flex-basis: 33%;"> 
+<div  style="flex-basis: 33%; margin-bottom: 1em;">
   
 ## History of NixOS wikis
 nixos.wiki outlines the rather bumpy history of creating NixOS wikis: https://nixos.wiki/wiki/NixOS_Wiki:History
