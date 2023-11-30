@@ -1,0 +1,29 @@
+---
+title: Collecting Garbage
+description: 
+published: true
+date: 2023-11-30T17:44:05.359Z
+tags: 
+editor: markdown
+dateCreated: 2023-11-30T17:44:05.359Z
+---
+
+# Collecting Garbage in Nix
+Nix isn't the lightest of systems. Over time, a Nix system will grow to have a severe storage footprint, that is, unless one regularly collects garbage.
+
+The simplest way to do so is the use the `nix-collect-garbage` command.
+
+## Removing all garbage
+
+> It can easily be a footgun to delete all but the most recent generation, given it negates one of Nix's superpowers, namely being able to rollback potentially breaking configuration changes.
+{.is-danger}
+
+Aside from the above notice, furhter, the manual page for `nix-collect-garbage` should be considered.
+
+> These flags should be used with care, because they potentially delete generations of profiles used by other users on the system.
+
+To remove all old generations of profiles, that is to remove all unused packages pulled in by previous states of your system, simply run:
+
+```bash
+nix-collect-garbage -d
+```
