@@ -2,7 +2,7 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-11-30T06:21:22.241Z
+date: 2023-11-30T14:10:01.165Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
@@ -12,6 +12,16 @@ dateCreated: 2023-11-26T15:53:10.293Z
 Let's document Nix, NixOS, and all things inbetween.
 
 ![nixlang-header-crop.jpg](/nixlang-header-crop.jpg)
+
+<div style="display: flex; flex-wrap: wrap; flex-basis: 33%;">
+
+<div id="nix-news" style="">
+
+## NixOS News
+  
+- NixOS version 23.11 Released! [Read Announcement.](https://discourse.nixos.org/t/nixos-23-11-released/36210)
+  
+</div>
 
 ## 1. Nix and NixOS
 
@@ -57,6 +67,8 @@ This has the dual purpose of making it a little less centralized, and making it 
 ### History of NixOS wikis
 nixos.wiki outlines the rather bumpy history of creating NixOS wikis: https://nixos.wiki/wiki/NixOS_Wiki:History
 
+</div>
+  
 ### Come Chat on Matrix
 
 <a href="https://matrix.to/#/#nixlangwiki:gitter.im"><img alt="Gitter" src="https://img.shields.io/gitter/room/eza-community/eza?logo=element&link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23eza%3Agitter.im&link=Gitter%20matrix%20room%20for%20Eza" width=200></a>
