@@ -2,7 +2,7 @@
 title: New Landing Page
 description: 
 published: true
-date: 2023-11-30T14:42:23.240Z
+date: 2023-11-30T14:44:42.839Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T14:24:49.313Z
@@ -16,7 +16,7 @@ dateCreated: 2023-11-30T14:24:49.313Z
 
 <div class="landing-item">
   
-## Setup
+## Nix/NixOS Setup
 
 [NixOS Quick Start](/nixos/Quick_Start)
 
@@ -24,13 +24,11 @@ dateCreated: 2023-11-30T14:24:49.313Z
   
 </div>
 
-    
-
 <div class="landing-item">
   
 ## The Basics
 
-[nix_run](/nix/nix_run)
+[The useful `nix run` command](/nix/nix_run)
   
 </div>
   
@@ -39,6 +37,7 @@ dateCreated: 2023-11-30T14:24:49.313Z
 ## NixOS News
   
 - NixOS version 23.11 Released! [Read Announcement.](https://discourse.nixos.org/t/nixos-23-11-released/36210)
+- nixlang.wiki announced! [Read Announcement.](https://discourse.nixos.org/t/announcing-nixlang-wiki)
   
 </div>
   
