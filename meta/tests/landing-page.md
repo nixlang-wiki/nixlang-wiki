@@ -2,7 +2,7 @@
 title: New Landing Page
 description: 
 published: true
-date: 2023-11-30T14:48:09.283Z
+date: 2023-11-30T14:49:14.856Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T14:24:49.313Z
@@ -16,17 +16,14 @@ dateCreated: 2023-11-30T14:24:49.313Z
 
 <div class="landing-item">
   
-## Nix/NixOS Setup
+### Nix/NixOS Setup
 
 [NixOS Quick Start](/nixos/Quick_Start)
 
 [Standalone Nix Setup](/nix/Setup)
   
-</div>
-
-<div class="landing-item">
   
-## The Basics
+### The Basics
 
 [The useful `nix run` command](/nix/nix_run)
   
