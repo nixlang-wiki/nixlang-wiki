@@ -2,7 +2,7 @@
 title: New Landing Page
 description: 
 published: true
-date: 2023-11-30T14:45:56.239Z
+date: 2023-11-30T14:46:26.654Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T14:24:49.313Z
@@ -45,7 +45,7 @@ dateCreated: 2023-11-30T14:24:49.313Z
 <div class="landing-item">
   
 
-## Official NixOS documentation
+## NixOS documentation
 The Nix manual: https://nixos.org/manual/nix/stable/
 The NixOS manual: https://nixos.org/manual/nixos/stable/
 The Nixpkgs manual: https://nixos.org/manual/nixpkgs/stable/
