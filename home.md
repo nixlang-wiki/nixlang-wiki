@@ -2,7 +2,7 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-11-30T14:54:58.203Z
+date: 2023-12-01T16:35:33.853Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
@@ -19,7 +19,7 @@ dateCreated: 2023-11-26T15:53:10.293Z
 ## Beginners
 ### Nix/NixOS Setup
 
-Start with our [NixOS Quick Start](/nixos/Quick_Start) (Work in progress)
+Start with our [NixOS Quick Start](/nixos/Quick_Start)
 
 Learn to setup [Standalone Nix](/nix/Setup)
   
