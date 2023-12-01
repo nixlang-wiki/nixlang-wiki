@@ -2,7 +2,7 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-12-01T16:35:33.853Z
+date: 2023-12-01T18:12:28.086Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
@@ -36,6 +36,7 @@ The useful [`nix run` command](/nix/nix_run).
 
 ## NixOS News
   
+- NixLang wiki adds landscape2 subdomain! [Check it out.](https://landscape.nixlang.wiki/)
 - NixOS version 23.11 Released! [Read Announcement.](https://discourse.nixos.org/t/nixos-23-11-released/36210)
 - RFC steering committe rotation [Read Announcement.](https://discourse.nixos.org/t/rfc-steering-committee-rotation-2023-24)
 - nixlang.wiki announced! [Read Announcement.](https://discourse.nixos.org/t/announcing-nixlang-wiki)
