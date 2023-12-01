@@ -1,8 +1,8 @@
 ---
-title: Info About the Project Category
+title: Procjets
 description: 
 published: true
-date: 2023-11-29T17:13:25.759Z
+date: 2023-12-01T06:11:08.114Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-27T05:37:26.502Z
