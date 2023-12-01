@@ -1,8 +1,8 @@
 ---
-title: Nix Homepage
+title: Nix
 description: Description of the nix category
 published: true
-date: 2023-11-29T17:12:56.677Z
+date: 2023-12-01T06:09:15.428Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-29T17:12:56.677Z
