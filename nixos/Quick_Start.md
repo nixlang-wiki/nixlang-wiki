@@ -2,7 +2,7 @@
 title: NixOS Quick Start
 description: 
 published: true
-date: 2023-12-01T16:03:04.841Z
+date: 2023-12-01T16:35:07.891Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T06:17:25.306Z
@@ -118,3 +118,7 @@ Here's a relatively minimal example (\<things in angle brackets\> should be repl
 }
 
 ```
+
+### Home Manager
+
+Set up a `home.nix` file for managing installed programs and dotfiles: [home-manager](/nix/home-manager)
