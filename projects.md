@@ -1,8 +1,8 @@
 ---
-title: Procjets
+title: Projects
 description: 
 published: true
-date: 2023-12-01T06:11:08.114Z
+date: 2023-12-01T06:11:44.029Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-27T05:37:26.502Z
