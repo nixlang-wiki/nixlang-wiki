@@ -2,7 +2,7 @@
 title: NixOS Quick Start
 description: 
 published: true
-date: 2023-12-01T16:35:07.891Z
+date: 2023-12-02T20:46:04.680Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T06:17:25.306Z
@@ -36,7 +36,7 @@ ln -sf $(realpath configuration.nix) /etc/nixos/
 
 The core configuration file is `configuration.nix`
 
-Here's a relatively minimal example (\<things in angle brackets\> should be replaced before use):
+Here's a relatively minimal example (\<\<things in double angle brackets\>\> should be replaced before use)):
 
 ```nix
 { pkgs, config, ... }:
@@ -52,7 +52,7 @@ Here's a relatively minimal example (\<things in angle brackets\> should be repl
 
   boot.tmp.cleanOnBoot = true;
   zramSwap.enable = true;
-  networking.hostName = <host name>;
+  networking.hostName = <<host name>>;
   networking.domain = "";
   services.openssh = {
     enable = true;
@@ -81,14 +81,14 @@ Here's a relatively minimal example (\<things in angle brackets\> should be repl
 
   users.mutableUsers = false;
   users.users = {
-    root.openssh.authorizedKeys.keys = [ <REDACTED> ];
-    <username> = {
+    root.openssh.authorizedKeys.keys = [ <<REDACTED>> ];
+    <<username>> = {
       isNormalUser = true;
-      home = "/home/<username>";
+      home = "/home/<<username>>";
       extraGroups = [ "wheel" ];
-      openssh.authorizedKeys.keys = [ <REDACTED> ];
+      openssh.authorizedKeys.keys = [ <<REDACTED>> ];
 
-      hashedPassword = <REDACTED>;
+      hashedPassword = <<REDACTED>>;
     };
   };
   
@@ -113,7 +113,7 @@ Here's a relatively minimal example (\<things in angle brackets\> should be repl
   programs = { zsh.enable = true; };
 
   # Separating the home manager configuration like this allows the same home manager configuration to be used on NixOS and systems with standalone Nix.
-  home-manager.users.<username> = import ./home.nix; 
+  home-manager.users.<<username>> = import ./home.nix; 
 
 }
 
