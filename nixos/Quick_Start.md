@@ -2,7 +2,7 @@
 title: NixOS Quick Start
 description: 
 published: true
-date: 2023-12-02T20:46:04.680Z
+date: 2023-12-02T20:46:33.290Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T06:17:25.306Z
@@ -36,7 +36,7 @@ ln -sf $(realpath configuration.nix) /etc/nixos/
 
 The core configuration file is `configuration.nix`
 
-Here's a relatively minimal example (\<\<things in double angle brackets\>\> should be replaced before use)):
+Here's a relatively minimal example (\<\<things in double angle brackets\>\> should be replaced before use):
 
 ```nix
 { pkgs, config, ... }:
