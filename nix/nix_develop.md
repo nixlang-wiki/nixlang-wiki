@@ -2,7 +2,7 @@
 title: Nix Develop
 description: 
 published: true
-date: 2023-11-30T06:49:03.256Z
+date: 2023-12-02T04:08:22.868Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T06:49:03.256Z
@@ -10,9 +10,9 @@ dateCreated: 2023-11-30T06:49:03.256Z
 
 # Nix Develop
 
-Requires flakes to be enabled.
+Requires [Flakes](/nix/Flakes) to be enabled.
 
-`nix develop` sets up a development environment with a flake.  Just create a `flake.nix` file in a project directory, then run `nix develop`.
+`nix develop` sets up and activates a development environment with a flake.  Create a `flake.nix` file in a project directory, then run `nix develop`.
 
 Example flake for a Python 3 project:
 
@@ -47,3 +47,8 @@ Example flake for a Python 3 project:
 }
 
 ```
+
+
+
+Somewhat similar to Python Virtual environments, but using Nix for dependencies. and being flakes
+makes it completely reproduceable.
