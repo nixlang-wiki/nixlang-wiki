@@ -2,7 +2,7 @@
 title: Nix Run
 description: 
 published: true
-date: 2023-11-30T14:55:19.287Z
+date: 2023-12-03T10:15:38.592Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T18:56:15.810Z
@@ -13,8 +13,16 @@ The `nix run` command is a powerful feature of the `nix` package manager that is
 
 When that is done, you're able to easily run any flake output without installing it.
 
-Nix run can make it easy to try out new programs. E.g. if you wanted to check out `eza` as a potential replacement for `ls`, instead of having to install it, you could just leverage the fact that it has a flake, and run `nix run github:cafkafk/eza`.
+Nix run can make it easy to try out new programs. E.g. if you wanted to check out `eza` as a potential replacement for `ls`, instead of having to install it, you could just leverage the fact that it has a flake with a default package allowing you to just run it without installing. 
 
-Supplying arguments is as easy as adding a `--` separator. E.g., for the previous example, to run `eza` in long view mode, `nix run github:cafkafk/eza -- -l`.
+```bash
+nix run github:cafkafk/eza
+```
+
+Supplying arguments is as easy as adding a `--` separator. E.g., for the previous example, to run `eza` in long view mode:
+
+```bash
+nix run github:cafkafk/eza -- -l
+```
 
 `nix run` can also be a great way to avoid the bad habit of installing programs imparatively for single uses. The author often finds herself using `nix run` on the weekend when entertaining guests with videogame emulators. Instead of having to either add some pacakge like `desmume` to her nix configuration, or installing it imparatively with either `nix-env -iA nixos.desmume` or `nix profile install nixpkgs#desmume`, you can just quickly run `nix run nixpkgs#desmume -- /path/to/some/game.rom` and have a good time.
