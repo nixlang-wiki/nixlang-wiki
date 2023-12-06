@@ -2,7 +2,7 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-12-06T08:58:19.936Z
+date: 2023-12-06T18:52:41.481Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
@@ -50,9 +50,9 @@ The useful [`nix run` command](/nix/nix_run).
   
 
 ## NixOS documentation
-The Nix manual: https://nixos.org/manual/nix/stable/
-The NixOS manual: https://nixos.org/manual/nixos/stable/
-The Nixpkgs manual: https://nixos.org/manual/nixpkgs/stable/
+[The Nix manual](https://nixos.org/manual/nix/stable/)
+[The NixOS manual](https://nixos.org/manual/nixos/stable/)
+[The Nixpkgs manual](https://nixos.org/manual/nixpkgs/stable/)
   
 </div>
 
