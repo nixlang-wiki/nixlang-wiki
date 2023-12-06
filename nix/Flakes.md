@@ -2,7 +2,7 @@
 title: Flakes
 description: 
 published: true
-date: 2023-11-30T15:28:57.020Z
+date: 2023-12-06T19:44:25.317Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T06:10:17.430Z
@@ -18,4 +18,5 @@ An input could e.g. be nixpkgs, and an output could e.g. be a nixos configuratio
 
 Flakes can also take other flakes as inputs.
 
-[experimental_features](/nix/experimental_features)
+## See Also
+- [Experimental Features](/nix/experimental_features)
