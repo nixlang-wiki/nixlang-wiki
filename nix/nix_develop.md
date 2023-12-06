@@ -2,7 +2,7 @@
 title: Nix Develop
 description: 
 published: true
-date: 2023-12-02T04:08:22.868Z
+date: 2023-12-06T18:33:31.865Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T06:49:03.256Z
@@ -10,7 +10,8 @@ dateCreated: 2023-11-30T06:49:03.256Z
 
 # Nix Develop
 
-Requires [Flakes](/nix/Flakes) to be enabled.
+> Requires [flakes](/nix/Flakes) to be enabled.
+{.is-warning}
 
 `nix develop` sets up and activates a development environment with a flake.  Create a `flake.nix` file in a project directory, then run `nix develop`.
 
