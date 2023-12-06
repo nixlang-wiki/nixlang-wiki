@@ -2,7 +2,7 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-12-06T19:24:13.982Z
+date: 2023-12-06T19:25:12.976Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
@@ -97,7 +97,7 @@ Wombat’s Book of Nix: https://mhwombat.codeberg.page/nix-book/
 <div class="landing-item">
 
 ### History of NixOS wikis
-nixos.wiki outlines the rather bumpy [history of creating NixOS wikis](https://nixos.wiki/wiki/NixOS_Wiki:History).
+nixos.wiki outlines the rather bumpy [history of NixOS wikis](https://nixos.wiki/wiki/NixOS_Wiki:History).
   
 </div>
 
