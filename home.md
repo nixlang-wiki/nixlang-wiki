@@ -2,7 +2,7 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-12-06T19:23:52.934Z
+date: 2023-12-06T19:24:13.982Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
@@ -81,8 +81,8 @@ Wombat’s Book of Nix: https://mhwombat.codeberg.page/nix-book/
 <div class="landing-item">
 
 ### Contributing
-[contributing_guidelines](/meta/contributing_guidelines)
-[code_of_conduct](/meta/code_of_conduct)
+[Contributing guidelines](/meta/contributing_guidelines)
+[Code of conduct](/meta/code_of_conduct)
   
 </div>
   
