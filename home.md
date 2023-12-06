@@ -2,7 +2,7 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-12-06T19:02:03.332Z
+date: 2023-12-06T19:23:52.934Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
@@ -13,7 +13,6 @@ dateCreated: 2023-11-26T15:53:10.293Z
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-start; flex-grow: 4;">
 
-
 <div class="landing-item">
   
 ## Beginners
@@ -22,7 +21,6 @@ dateCreated: 2023-11-26T15:53:10.293Z
 Start with our [NixOS quick start](/nixos/Quick_Start).
 
 Learn to setup [standalone Nix](/nix/Setup).
-  
   
 ### The Basics
   
@@ -68,36 +66,48 @@ Wombat’s Book of Nix: https://mhwombat.codeberg.page/nix-book/
   
 </div>
 
+</div>
+
+## About Wiki
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-start; flex-grow: 4;">
+
 <div class="landing-item">
   
-## About Wiki
-  
+### FAQ
 [Frequently Asked Questions](/faq)
   
-### Other Wikis
-Unofficial NixOS Wiki (Deprecated): https://nixos.wiki
-Archive of the defunct official wiki: https://web.archive.org/web/20170830114339/https://nixos.org/~eelco/wiki-20160212.xml.gz
-
-### History of NixOS wikis
-nixos.wiki outlines the rather bumpy history of creating NixOS wikis: https://nixos.wiki/wiki/NixOS_Wiki:History
-  
 </div>
-
+  
 <div class="landing-item">
-
-## You WOULD download this wiki
-...or the contents of it. Currently, nixlang.wiki is automatically backed up to a git repository every five minutes https://github.com/nixlang-wiki/nixlang-wiki.
-
-This has the dual purpose of making it a little less centralized, and making it easier to read/write in your terminal.
-
-</div>
-  
-</div>
-  
-### Come Chat on Matrix
-
-<a href="https://matrix.to/#/#nixlangwiki:gitter.im"><img alt="Gitter" src="https://img.shields.io/gitter/room/eza-community/eza?logo=element&link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23eza%3Agitter.im&link=Gitter%20matrix%20room%20for%20Eza" width=200></a>
 
 ### Contributing
 [contributing_guidelines](/meta/contributing_guidelines)
 [code_of_conduct](/meta/code_of_conduct)
+  
+</div>
+  
+<div class="landing-item">
+  
+### Other Wikis
+[Unofficial NixOS Wiki (Deprecated)](https://nixos.wiki)
+[Archive of the defunct official wiki](https://web.archive.org/web/20170830114339/https://nixos.org/~eelco/wiki-20160212.xml.gz)
+
+</div>
+  
+<div class="landing-item">
+
+### History of NixOS wikis
+nixos.wiki outlines the rather bumpy [history of creating NixOS wikis](https://nixos.wiki/wiki/NixOS_Wiki:History).
+  
+</div>
+
+</div>
+
+## You WOULD download this wiki
+...or the contents of it. Currently, nixlang.wiki is automatically backed up to a [git repository](https://github.com/nixlang-wiki/nixlang-wiki) every five minutes.
+
+This has the dual purpose of making it a little less centralized, and making it easier to read/write in your terminal.
+  
+### Come Chat on Matrix
+
+<a href="https://matrix.to/#/#nixlangwiki:gitter.im"><img alt="Gitter" src="https://img.shields.io/gitter/room/eza-community/eza?logo=element&link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23eza%3Agitter.im&link=Gitter%20matrix%20room%20for%20Eza" width=200></a>
