@@ -2,14 +2,14 @@
 title: Home Manager
 description: 
 published: true
-date: 2023-12-01T16:28:17.448Z
+date: 2023-12-06T01:26:13.318Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-01T16:28:17.448Z
 ---
 
 # Home Manager
-Home manager is a very useful way to have Nix manage your configuration files for various programs.  Isolating its configuration settings to a `home.nix` file allows the same file to be used with both NixOS and standalone Nix.
+[Home manager](https://github.com/nix-community/home-manager) is a very useful way to have Nix manage your configuration files for various programs.  Isolating its configuration settings to a `home.nix` file allows the same file to be used with both NixOS and standalone Nix.
 
 Relatively minimal `home.nix` example (Be sure to replace the \<things in angled brackets\>)
 ``` nix
