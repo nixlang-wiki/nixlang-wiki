@@ -2,11 +2,12 @@
 title: Unix
 description: 
 published: true
-date: 2023-12-01T06:14:07.365Z
+date: 2023-12-06T09:42:15.452Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-29T17:14:57.992Z
 ---
 
 # Linux Homepage
-This section exists to document the Linux section
+> To browse the contents of this section, use the browse view.
+{.is-info}
