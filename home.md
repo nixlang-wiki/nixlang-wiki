@@ -2,7 +2,7 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-12-06T19:33:59.098Z
+date: 2023-12-07T05:28:02.491Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
@@ -83,6 +83,8 @@ The useful [`nix run` command](/nix/nix_run).
 ### Contributing
 [Contributing guidelines](/meta/contributing_guidelines)
 [Code of conduct](/meta/code_of_conduct)
+[Wanted pages](/meta/wanted)
+[Outreach](/meta/outreach)
   
 </div>
   
