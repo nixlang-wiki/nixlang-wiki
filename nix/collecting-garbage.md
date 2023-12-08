@@ -2,7 +2,7 @@
 title: Collecting Garbage
 description: 
 published: true
-date: 2023-11-30T17:44:05.359Z
+date: 2023-12-08T18:39:58.766Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T17:44:05.359Z
@@ -27,3 +27,11 @@ To remove all old generations of profiles, that is to remove all unused packages
 ```bash
 nix-collect-garbage -d
 ```
+
+Sometimes, it might be nescesarry to run a version of the above with root priveleges, e.g. to clear out unused boot entries. [^1]
+
+```bash
+sudo nix-collect-garbage -d 
+```
+
+[^1]: https://discourse.nixos.org/t/no-space-left-on-boot/24019/6
