@@ -2,7 +2,7 @@
 title: Patching
 description: How to apply batching to sources when building.
 published: true
-date: 2023-12-09T14:56:51.435Z
+date: 2023-12-09T17:14:19.941Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-08T23:28:25.525Z
@@ -73,15 +73,43 @@ We can apply a patch during the `patchPhase` of `mkDerivation`.  This will modif
 
 ### Patch
 
-A patch is a file that describes how to modify an original file to produce a modified file.  Such a file looks like this:
+A patch is a file that describes how to modify an original file to produce a modified file.  We can generate patch files from programs like `diff` and `git diff`.
+
+To start, we need to get access to the source.  Typically the external project is hosted using git, so we clone the repository.  Then we can modify the file we care about.  In our case, `openpdf.py`.  We update the string `/usr/bin/zathura` to just `zathura`.  Then we can run `git diff` and it will produce the following to `stdout`:
+
 ```
-9c9
-< subprocess.run(["/usr/bin/zathura", files[x]])
----
-> subprocess.run(["zathura", files[x]])
+$ git diff
+diff --git a/openpdf.py b/openpdf.py
+index 1fa1bb5..778198b 100644
+--- a/openpdf.py
++++ b/openpdf.py
+@@ -6,4 +6,4 @@ for i, filename in enumerate(files):
+     print(f"{i}: {filename}")
+ 
+ x = int(input("Pick file: "))
+-subprocess.run(["/usr/bin/zathura", files[x]])
++subprocess.run(["zathura", files[x]]
 ```
 
-https://nixos.org/manual/nixpkgs/stable/#ssec-patch-phase
+We can redirect this output to a patch file called `zathura.patch`, which describes our changes.
+```sh
+$ git diff > zathura.patch
+```
+
+If we aren't using git, we can make a copy of the source file alongside it.  We call this new file `modified.py`.  We can generate a diff file using `git`.
+```
+git diff openpdf.py modified.py > zathura.patch
+``` 
+Or we can use `diff`, which is a 
+```
+diff --unified openpdf.py modified.py > zathura.patch
+```
+Now we have a patch file that we can add to our flake.
+
+### Patch Phase
+
+One of the default phases of `mkDerivation` is the [patch phase](https://nixos.org/manual/nixpkgs/stable/#ssec-patch-phase).
+
 
 TODO: Currently no issue.  Can't use writeshellapplication since you can't overwrite patches.  Need to use mkderivation directly, or a different helper function. Consider a python application that has a hard-coded path somewhere.  Maybe it calls an external shell script at some fixed path?
 
