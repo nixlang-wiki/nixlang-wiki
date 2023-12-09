@@ -2,7 +2,7 @@
 title: Patching
 description: How to apply batching to sources when building.
 published: true
-date: 2023-12-09T14:48:06.413Z
+date: 2023-12-09T14:56:51.435Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-08T23:28:25.525Z
@@ -68,6 +68,18 @@ Ah!  The creator of the script hard-coded the file path for `zathura`.  We shoul
 ## Patching the issue
 
 If we were packaging our own script, we would simply modify the source code ourselves.  But we are trying to package an *external* project.  We could submit a pull request, but that could conflict with maintainer's environments, conflict with existing build tools, or whatever.  We need to modify the source code at build time, to fix this issue.
+
+We can apply a patch during the `patchPhase` of `mkDerivation`.  This will modify the source right after downloading and extracting it, but before we build and install.
+
+### Patch
+
+A patch is a file that describes how to modify an original file to produce a modified file.  Such a file looks like this:
+```
+9c9
+< subprocess.run(["/usr/bin/zathura", files[x]])
+---
+> subprocess.run(["zathura", files[x]])
+```
 
 https://nixos.org/manual/nixpkgs/stable/#ssec-patch-phase
 
