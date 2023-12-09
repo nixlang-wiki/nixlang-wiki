@@ -2,7 +2,7 @@
 title: Patching
 description: How to apply batching to sources when building.
 published: true
-date: 2023-12-09T14:41:31.283Z
+date: 2023-12-09T14:41:43.949Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-08T23:28:25.525Z
@@ -47,26 +47,6 @@ The script writer documents how to run it: `python3 openpdf.py`.  You try this f
         cp openpdf.py $out/bin/openpdf
         chmod +x $out/bin/openpdf
       '';
-    };
-  };
-}
-```
-
-Suppose we have the following shell script that we want to package with nix.  This prompts the user with all the `.pdf` files in the current directory, then opens it in zathura.
-```sh
-f=$(fd . --extension pdf | fzf)
-zathura "$f"
-```
-We can wrap this in a flake using `writeShellApplication` like so.
-```nix
-{
-	outputs = {self, nixpkgs}: let
-  	pkgs = nixpkgs.legacyPackages.x86_64-linux;
-  in {
-    packages.x86_64-linux.default = pkgs.writeShellApplication {
-      name = "openpdf";
-      runtimeInputs = with pkgs; [fd fzf zathura];
-      text = pkgs.lib.readFile ./script.sh;
     };
   };
 }
