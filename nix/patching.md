@@ -2,7 +2,7 @@
 title: Patching
 description: How to apply batching to sources when building.
 published: true
-date: 2023-12-09T14:41:43.949Z
+date: 2023-12-09T14:44:01.749Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-08T23:28:25.525Z
@@ -51,6 +51,19 @@ The script writer documents how to run it: `python3 openpdf.py`.  You try this f
   };
 }
 ```
+
+You go to test your flake with `nix run`:
+```
+$ nix run
+0: first.pdf
+1: second.pdf
+2: third.pdf
+Pick file: 1
+Traceback (most recent call last):
+...
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/bin/zathura'
+```
+Ah!  The creator of the script hard-coded the file path for `zathura`.  We should modify the script to update the path, or better yet, remove it altogether, since we know from `nativeBuildInputs` will put `zathura` in our path.
 
 ## Patching the issue
 
