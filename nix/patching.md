@@ -2,7 +2,7 @@
 title: Patching
 description: How to apply batching to sources when building.
 published: true
-date: 2023-12-09T17:14:19.941Z
+date: 2023-12-09T17:15:46.344Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-08T23:28:25.525Z
@@ -108,8 +108,26 @@ Now we have a patch file that we can add to our flake.
 
 ### Patch Phase
 
-One of the default phases of `mkDerivation` is the [patch phase](https://nixos.org/manual/nixpkgs/stable/#ssec-patch-phase).
-
+One of the default phases of `mkDerivation` is the [patch phase](https://nixos.org/manual/nixpkgs/stable/#ssec-patch-phase).  All we need to do is add our `zathura.patch` file to the list of `patches` like so.
+```
+{
+	outputs = {self, nixpkgs}: let
+  	pkgs = nixpkgs.legacyPackages.x86_64-linux;
+  in {
+    packages.x86_64-linux.default = pkgs.stdenv.mkDervation {
+      name = "openpdf";
+      src = ./.;
+      runtimeInputs = with pkgs; [python zathura];
+      patches = [ ./zathura.patch ];
+      installPhase = ''
+        mkdir -p $out/bin
+        cp openpdf.py $out/bin/openpdf
+        chmod +x $out/bin/openpdf
+      '';
+    };
+  };
+}
+```
 
 TODO: Currently no issue.  Can't use writeshellapplication since you can't overwrite patches.  Need to use mkderivation directly, or a different helper function. Consider a python application that has a hard-coded path somewhere.  Maybe it calls an external shell script at some fixed path?
 
