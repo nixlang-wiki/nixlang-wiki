@@ -2,13 +2,16 @@
 title: Patching
 description: How to apply batching to sources when building.
 published: true
-date: 2023-12-08T23:29:25.548Z
+date: 2023-12-09T04:27:55.363Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-08T23:28:25.525Z
 ---
 
 # Patches (WIP)
+> This page is a draft
+{.is-danger}
+
 When packaging external software for nix, we might need to modify the source code directly.  A common use case could be updating links to executables.
 
 In this example, we will show how to generate a patch, and apply it when packaging a shell script for use in nix.
