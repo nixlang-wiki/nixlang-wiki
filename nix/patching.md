@@ -2,7 +2,7 @@
 title: Patching
 description: How to apply batching to sources when building.
 published: true
-date: 2023-12-09T14:44:01.749Z
+date: 2023-12-09T14:48:06.413Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-08T23:28:25.525Z
@@ -63,9 +63,11 @@ Traceback (most recent call last):
 ...
 FileNotFoundError: [Errno 2] No such file or directory: '/usr/bin/zathura'
 ```
-Ah!  The creator of the script hard-coded the file path for `zathura`.  We should modify the script to update the path, or better yet, remove it altogether, since we know from `nativeBuildInputs` will put `zathura` in our path.
+Ah!  The creator of the script hard-coded the file path for `zathura`.  We should modify the script to update the path, or better yet, remove it altogether, since we know from `buildInputs` will put `zathura` in our path for us.
 
 ## Patching the issue
+
+If we were packaging our own script, we would simply modify the source code ourselves.  But we are trying to package an *external* project.  We could submit a pull request, but that could conflict with maintainer's environments, conflict with existing build tools, or whatever.  We need to modify the source code at build time, to fix this issue.
 
 https://nixos.org/manual/nixpkgs/stable/#ssec-patch-phase
 
