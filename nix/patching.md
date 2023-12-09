@@ -2,15 +2,13 @@
 title: Patching
 description: How to apply batching to sources when building.
 published: true
-date: 2023-12-09T17:15:46.344Z
+date: 2023-12-09T17:20:00.281Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-08T23:28:25.525Z
 ---
 
-# Patches (WIP)
-> This page is a draft
-{.is-danger}
+# Patches
 
 When packaging external software for nix, we might need to modify the source code directly.  A common use case could be updating links to executables.
 
@@ -129,10 +127,8 @@ One of the default phases of `mkDerivation` is the [patch phase](https://nixos.o
 }
 ```
 
-TODO: Currently no issue.  Can't use writeshellapplication since you can't overwrite patches.  Need to use mkderivation directly, or a different helper function. Consider a python application that has a hard-coded path somewhere.  Maybe it calls an external shell script at some fixed path?
+And now our flake will make our change before building and installing.  It works now!
 
-If we have access to the source code directly, we can just modify our script.  No issues, no need for patching.
+### Shebang
 
-But what if you are packaging some EXTERNAL program?  You can't modify the source code directly.  We will need to apply a patch to modify the source with our fix before building.
-
-Generate a patch using `git diff > change.patch`.  Then add to `patches` attribute.  See now how our python code works.
+If you noticed from this example, we didn't have to modify the `#!/usr/bin/python3` at the top of the source file.  Well `mkDerivation` handles this for us in the [fixup phase](https://nixos.org/manual/nixpkgs/stable/#ssec-fixup-phase).  It accomplishes this using patching!
