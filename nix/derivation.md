@@ -2,7 +2,7 @@
 title: Derivation
 description: 
 published: false
-date: 2023-12-10T13:50:58.365Z
+date: 2023-12-10T13:59:23.533Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-10T13:41:43.087Z
@@ -12,7 +12,7 @@ dateCreated: 2023-12-10T13:41:43.087Z
 A derivation is a nix expression that encapsulates how to install a piece of software.
 
 ## Derivation Definition
-A derivation is just an attribute set with the following attributes.
+A derivation is just an attribute whose attribute `type` has value `"derivation"`.  In practice, a derivation is an attribute set with the following attributes.
 ```
 {
 	name = "app";
@@ -20,6 +20,7 @@ A derivation is just an attribute set with the following attributes.
   builder = "echo 'building!'";
 }
 ```
+You will never build derivations from scratch, but it's helpful to understand what a derivation is at the most basic level.
 
 ## `derivation` builtin
 The standard library has a function `derivation` to build derivations for you.
