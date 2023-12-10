@@ -2,8 +2,8 @@
 title: Simple NixOS Mailserver
 description: Simple NixOS Mailserver
 published: true
-date: 2023-11-30T15:26:48.909Z
-tags: 
+date: 2023-12-10T14:07:38.692Z
+tags: flavor
 editor: markdown
 dateCreated: 2023-11-30T15:26:48.909Z
 ---
