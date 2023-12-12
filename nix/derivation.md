@@ -2,7 +2,7 @@
 title: Derivation
 description: 
 published: false
-date: 2023-12-12T20:36:27.362Z
+date: 2023-12-12T20:40:18.742Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-10T13:41:43.087Z
@@ -26,9 +26,15 @@ The `name` is the name of the derivation.  When this derivation is added to the 
 You will never build derivations from scratch, but it's helpful to understand what a derivation is at the most basic level.
 
 ## `derivation` builtin
-The standard library has a function `derivation` to build derivations for you.  It take an attribute set as input with `name`, `system`, and `builder` attributes.
+The standard library has a function `derivation` to build derivations for you.  It take an attribute set as input with `name`, `system`, and `builder` attributes.  We can explore the returned attribute set after calling this function in the nix REPL.
+```
+> d = derivation {name="app",; system="x86_64-linux"; builder="build.sh";}
+> __attrNames d
+```
 
-A derivation is a description of how nix will manage the store.  The real work of building and installing software is handled by whatever script is being run with `builder`.
+A derivation is a description of how nix will manage the store.  The real work of building and installing software is handled by whatever script is being run with `builder`.  `builder` attribute can point to an executable for installing the software.  Any arguments needed for run the `builder` executable can be passed in with the `args` attribute.
+
+More attributes are documented in the [NixOS manual page for derivations](https://nixos.org/manual/nix/stable/language/derivations.html).
 
 It is uncommon you will build a derivation directly from `derivation`.  There are higher levels of abstraction provided by nixpkgs that are more specific to how software is built and installed.
 
