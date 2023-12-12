@@ -2,7 +2,7 @@
 title: Derivation
 description: 
 published: false
-date: 2023-12-10T14:47:41.690Z
+date: 2023-12-12T20:36:27.362Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-10T13:41:43.087Z
@@ -26,7 +26,7 @@ The `name` is the name of the derivation.  When this derivation is added to the 
 You will never build derivations from scratch, but it's helpful to understand what a derivation is at the most basic level.
 
 ## `derivation` builtin
-The standard library has a function `derivation` to build derivations for you.  It take an attribute set as input with...
+The standard library has a function `derivation` to build derivations for you.  It take an attribute set as input with `name`, `system`, and `builder` attributes.
 
 A derivation is a description of how nix will manage the store.  The real work of building and installing software is handled by whatever script is being run with `builder`.
 
