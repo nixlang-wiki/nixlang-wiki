@@ -2,7 +2,7 @@
 title: Derivation
 description: 
 published: false
-date: 2023-12-12T20:55:15.876Z
+date: 2023-12-14T22:35:58.565Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-10T13:41:43.087Z
@@ -41,7 +41,7 @@ It is uncommon you will build a derivation directly from `derivation`.  There ar
 ## `mkDerivation` from nixpkgs
 Nixpkgs also provides another level of abstraction called `mkDerivation`, which includes a general purpose convention for building and installing software.  It even handles C compilation out of the box, since many applications use `make` for building and install software.
 
-`mkDerivation` is set up using _phases_ or list of steps that are typically taken in the build process.  `mkDerivation` allows us to modify phases to fit the needs of whatever software we are building and installing, but without a lot of repeated or basic work, such as uncompressing a `tar` file.
+`mkDerivation` is set up using *phases* or list of steps that are typically taken in the build process.  `mkDerivation` allows us to modify phases to fit the needs of whatever software we are building and installing, but without a lot of repeated or basic work, such as uncompressing a `tar` file.
 
 By default nixpkgs uses the following phases:
 1. Unpack: uncompressed source code
@@ -54,7 +54,7 @@ By default nixpkgs uses the following phases:
 8. Install Check: verify successful installation
 9. Distribution: produce source distributions
 
-These phases may or may not apply based on the package you building.  For instance, a single python script doesn't need a build step at all.  A static website may not have a test suite to check anything.  But by default `mkDerivation` will try defaults if they exist, for the most part specific to C compilation.
+These phases may or may not apply based on the package you building.  For instance, a single python script doesn't need a build step at all.  A static website may not have a test suite to check anything.  But by default `mkDerivation` will try executing a phase if applicable, otherwise it is skipped.
 
 ## Language Specific Derivations from nixpkgs
 Nixpkgs provides many other wrapper functions on `derivation` specific to each language.  The full list you can find in the source.
