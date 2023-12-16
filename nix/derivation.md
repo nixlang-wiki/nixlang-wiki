@@ -2,7 +2,7 @@
 title: Derivation
 description: 
 published: false
-date: 2023-12-14T22:35:58.565Z
+date: 2023-12-16T15:38:45.388Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-10T13:41:43.087Z
@@ -12,7 +12,9 @@ dateCreated: 2023-12-10T13:41:43.087Z
 A derivation is a nix expression that encapsulates how to install a piece of software.
 
 ## Derivation Definition
-A derivation is just an attribute whose attribute `type` has value `"derivation"`.  In practice, a derivation is an attribute set with the following attributes.
+A *derivation* represents the instructions for building some artifact.  This artifact can be an application, a website, or configuration file.  A derivation can describe how a piece of software is built and installed, in the same way a package manager installs packages.  
+
+Technically, a derivation is just an attribute whose attribute `type` has value `"derivation"`.  In practice, a derivation is an attribute set with the following attributes.
 ```
 {
 	name = "app";
@@ -32,7 +34,7 @@ The standard library has a function `derivation` to build derivations for you.  
 > __attrNames d
 ```
 
-A derivation is a description of how nix will manage the store.  The real work of building and installing software is handled by whatever script is being run with `builder`.  `builder` attribute can point to an executable for installing the software.  Any arguments needed for run the `builder` executable can be passed in with the `args` attribute.
+A derivation is a description of how nix will manage the store.  The real work of building and installing software is handled by whatever script is being run with `builder`.  The `builder` attribute can point to an executable for installing the software.  Any arguments needed for run the `builder` executable can optionally be passed in with the `args` attribute.
 
 More attributes are documented in the [NixOS manual page for derivations](https://nixos.org/manual/nix/stable/language/derivations.html).  Also documented is precisely how the builder is executed regarding the nix store, environment variables, and outputs.
 
