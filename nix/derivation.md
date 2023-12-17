@@ -2,7 +2,7 @@
 title: Derivation
 description: 
 published: false
-date: 2023-12-16T15:38:45.388Z
+date: 2023-12-17T00:53:40.569Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-10T13:41:43.087Z
