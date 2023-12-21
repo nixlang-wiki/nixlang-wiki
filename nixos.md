@@ -2,7 +2,7 @@
 title: NixOS
 description: 
 published: true
-date: 2023-12-10T14:00:29.183Z
+date: 2023-12-21T19:39:49.300Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-01T06:08:08.073Z
@@ -18,7 +18,7 @@ NixOS is a linux distribution built on top of [nix](/nix).
 
 ## Features
 
- - mostly declarative configuration (by default [/etc/configuration.nix](/nixos/configuration))
+ - (mostly) declarative configuration (by default [/etc/configuration.nix](/nixos/configuration))
  - immutable filesystem
  - atomic updates
  - largest package index
