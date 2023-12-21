@@ -2,7 +2,7 @@
 title: Collecting Garbage
 description: 
 published: true
-date: 2023-12-08T18:39:58.766Z
+date: 2023-12-21T22:38:22.074Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-30T17:44:05.359Z
@@ -18,7 +18,7 @@ The simplest way to do so is the use the `nix-collect-garbage` command.
 > It can easily be a footgun to delete all but the most recent generation, given it negates one of Nix's superpowers, namely being able to rollback potentially breaking configuration changes.
 {.is-danger}
 
-Aside from the above notice, furhter, the manual page for `nix-collect-garbage` should be considered.
+Aside from the above notice, further, the manual page for `nix-collect-garbage` should be considered.
 
 > These flags should be used with care, because they potentially delete generations of profiles used by other users on the system.
 
