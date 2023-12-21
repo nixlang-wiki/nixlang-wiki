@@ -2,7 +2,7 @@
 title: NixOS
 description: 
 published: true
-date: 2023-12-21T20:53:17.734Z
+date: 2023-12-21T20:58:08.314Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-01T06:08:08.073Z
@@ -21,7 +21,7 @@ NixOS is a linux distribution built on top of [nix](/nix).
  - (mostly) [declarative configuration](#declarative-configuration)
  - [atomic updates](#atomic-updates)
  - [immutable filesystem](#immutable-filesystem)
- - [largest package index](https://search.nixos.org/packages)
+ - [largest package index](#largest-package-index)
 
 ### Declarative Configuration
 
@@ -56,6 +56,11 @@ When changes to the filesystem cannot be done by unprivileged users, it is consi
 
 Concretely, only certain privileged users may change the system's state.
 This makes it more difficult for malware to install programs and services system-wide, or for users to make changes to the system that are not in the configuration file i.e the system nearly always reflects what is declared in the configuration file.
+
+### Largest package index
+
+One can find a large number of programs and services in the [Nix Package Index](https://search.nixos.org/).
+Nearly anything that is available on another linux distribution is available on NixOS.
 
 ## Configuration
 
