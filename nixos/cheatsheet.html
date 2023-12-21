@@ -1,0 +1,57 @@
+<!--
+title: Cheatsheet
+description: Useful commands and their counterparts on imperative OSes
+published: true
+date: 2023-12-21T22:51:55.254Z
+tags: comparison, commands
+editor: ckeditor
+dateCreated: 2023-12-21T22:51:55.254Z
+-->
+
+<figure class="table">
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <h1>Purpose</h1>
+        </td>
+        <td>
+          <h1>Traditional</h1>
+        </td>
+        <td>
+          <h1>NixOS</h1>
+        </td>
+        <td>
+          <h1>nix</h1>
+        </td>
+      </tr>
+      <tr>
+        <td>Install package</td>
+        <td><code>apt install $package</code></td>
+        <td>
+          <p>Add to <code>environment.systemPackages</code> then</p>
+          <p><code>nixos-rebuild switch</code></p>
+        </td>
+        <td><code>nix-env -iA nixpkgs.$package</code></td>
+      </tr>
+      <tr>
+        <td>Remove package</td>
+        <td><code>apt remove $package</code></td>
+        <td>Remove from <code>environment.systemPackages</code> then <code>nixos-rebuild switch</code></td>
+        <td><code>nix-env --uninstall $package</code></td>
+      </tr>
+      <tr>
+        <td>Install service</td>
+        <td><code>apt install $package &amp;&amp; sudo systemctl enable ${service}.service</code></td>
+        <td><code>services.&lt;name&gt;.enable = true</code></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Remove service</td>
+        <td><code>apt remove $package</code></td>
+        <td><code>services.&lt;name&gt;.enable = false</code></td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
