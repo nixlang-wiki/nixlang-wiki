@@ -2,7 +2,7 @@
 title: NixOS
 description: 
 published: true
-date: 2023-12-21T20:46:32.528Z
+date: 2023-12-21T20:53:17.734Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-01T06:08:08.073Z
@@ -49,6 +49,13 @@ Should a service be started that the user doesn't want, a superfluous program be
 
 Traditionally, interruptions to updates like power outtages, or out of memory or out of space errors, have a high potential of rendering the system unusable.
 With atomic updates, the risk is considerably reduced.
+
+### Immutable filesystem
+
+When changes to the filesystem cannot be done by unprivileged users, it is considered "immutable".
+
+Concretely, only certain privileged users may change the system's state.
+This makes it more difficult for malware to install programs and services system-wide, or for users to make changes to the system that are not in the configuration file i.e the system nearly always reflects what is declared in the configuration file.
 
 ## Configuration
 
