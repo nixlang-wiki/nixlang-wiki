@@ -2,7 +2,7 @@
 title: NixLang Wiki
 description: An unofficial, maintained wiki for NixOS
 published: true
-date: 2023-12-07T05:28:02.491Z
+date: 2023-12-22T20:09:25.186Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
@@ -11,12 +11,19 @@ dateCreated: 2023-11-26T15:53:10.293Z
 # Welcome to nixlang.wiki
 ![nixlang-header-crop2.jpg](/nixlang-header-crop2.jpg)
 
+|  Overview |
+| --------- |
+|  [nix](/nix) - package manager and build tool |
+|  [nix lang](/nix/language/intro) - functional language of the tool |
+| [NixOS](/nixos) - a linux distribution built on top of nix |
+
 <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: flex-start; flex-grow: 4;">
 
 <div class="landing-item">
   
 ## Beginners
-### Nix/NixOS Setup
+  
+### NixOS Setup
 
 Start with our [NixOS quick start](/nixos/Quick_Start).
 
