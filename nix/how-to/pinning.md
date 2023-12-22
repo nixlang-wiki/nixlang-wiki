@@ -2,7 +2,7 @@
 title: Pinning packages
 description: Describes how to pin a package to a particular version
 published: true
-date: 2023-12-22T21:44:04.837Z
+date: 2023-12-22T21:46:01.050Z
 tags: howto, package management
 editor: markdown
 dateCreated: 2023-12-22T21:44:04.837Z
@@ -75,4 +75,4 @@ in
     custom.firefox
   ];
 }
-``
+```
