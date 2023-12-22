@@ -2,7 +2,7 @@
 title: Cheatsheet
 description: Useful commands and their counterparts on imperative OSes
 published: true
-date: 2023-12-21T22:51:55.254Z
+date: 2023-12-22T21:03:04.391Z
 tags: comparison, commands
 editor: ckeditor
 dateCreated: 2023-12-21T22:51:55.254Z
@@ -12,18 +12,10 @@ dateCreated: 2023-12-21T22:51:55.254Z
   <table>
     <tbody>
       <tr>
-        <td>
-          <h1>Purpose</h1>
-        </td>
-        <td>
-          <h1>Traditional</h1>
-        </td>
-        <td>
-          <h1>NixOS</h1>
-        </td>
-        <td>
-          <h1>nix</h1>
-        </td>
+        <td><strong>Purpose</strong></td>
+        <td><strong>Traditional</strong></td>
+        <td><strong>NixOS</strong></td>
+        <td><strong>nix</strong></td>
       </tr>
       <tr>
         <td>Install package</td>
@@ -51,6 +43,51 @@ dateCreated: 2023-12-21T22:51:55.254Z
         <td><code>apt remove $package</code></td>
         <td><code>services.&lt;name&gt;.enable = false</code></td>
         <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Update package list</td>
+        <td><code>apt update</code></td>
+        <td><code>nix-channel --update</code></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>Upgrade packages</td>
+        <td><code>apt upgrade</code></td>
+        <td><code>nixos-rebuild switch --upgrade</code></td>
+        <td><code>nix-env -u</code></td>
+      </tr>
+      <tr>
+        <td>Check for broken packages</td>
+        <td><code>apt check</code></td>
+        <td><code>nix-store --verify --check-contents</code></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>List package dependencies</td>
+        <td><code>apt-cache depends emacs</code></td>
+        <td>
+          <p>See direct dependencies<br><code>nix-store --query --requisites $(which emacs)</code></p>
+          <p>or show a nested ASCII tree of dependencies<br><code>nix-store -q --tree $(which emacs)</code></p>
+        </td>
+        <td>same as NixOS</td>
+      </tr>
+      <tr>
+        <td>Verify all installed packages</td>
+        <td><code>debsum</code></td>
+        <td><code>nix-store --verify --check-contents</code></td>
+        <td>same as NixOS</td>
+      </tr>
+      <tr>
+        <td>Fix packages with broken checksums</td>
+        <td><code>apt --fix-broken install</code></td>
+        <td><code>nix-store --verify --check-contents --repair</code></td>
+        <td>same as NixOS</td>
+      </tr>
+      <tr>
+        <td>Install a particular version of a package</td>
+        <td><code>apt-get install package=version</code></td>
+        <td>See <a href="/nix/how-to/pinning">Pinning nixpkgs</a></td>
+        <td>same as NixOS</td>
       </tr>
     </tbody>
   </table>
