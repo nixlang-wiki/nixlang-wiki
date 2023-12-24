@@ -2,7 +2,7 @@
 title: NixOS
 description: 
 published: true
-date: 2023-12-21T22:32:35.346Z
+date: 2023-12-24T15:07:07.584Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-01T06:08:08.073Z
@@ -67,3 +67,8 @@ Nearly anything that is available on another linux distribution is available on 
 By default, the configuration file is located at `/etc/nixos/configuration.nix`
 
 One can build the configuration using `sudo nixos-rebuild build` or directly build and switch using `sudo nixos-rebuild switch`.
+
+All available options and packages are available either [online](https://search.nixos.org/packages) or with `man configuration.nix`.
+
+> If you want to install a program or service, it's highly advised to first check the available options!
+{.is-info}
