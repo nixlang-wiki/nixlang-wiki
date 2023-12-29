@@ -2,7 +2,7 @@
 title: Packaging things with nix
 description: All about how to package different thing using the package manager and build tool
 published: true
-date: 2023-12-29T18:36:31.957Z
+date: 2023-12-29T20:34:43.795Z
 tags: package management, guide, derivation
 editor: markdown
 dateCreated: 2023-12-26T12:08:20.540Z
@@ -13,8 +13,8 @@ dateCreated: 2023-12-26T12:08:20.540Z
 Nix can be used to build and package software, libraries, files, or just about anything.
 Packages in `nix` are also called [derivations](/nix/derivation).
 
-This page will explain the basics of creating a derivation in nix. It's very bare bones as `nix` is written to be able to package nearly anything. But fear not, [nixpkgs](/nix/nixpkgs/index) has a few builders/packagers for different languages, frameworks, and more.
-Check out the side bar for guide on how to use them
+> This page explains the basic function for creating a derivation in nix. It's very bare bones as `nix` is written to be able to package nearly anything. See [mkDerivation](/nix/packaging/mkDerivation) for a **higher level** wrapper and others built on top of that.
+{.is-warning}
 
 ## The basic derivation
 
