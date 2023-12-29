@@ -2,7 +2,7 @@
 title: Packaging things with nix
 description: All about how to package different thing using the package manager and build tool
 published: true
-date: 2023-12-29T14:31:53.677Z
+date: 2023-12-29T18:36:31.957Z
 tags: package management, guide, derivation
 editor: markdown
 dateCreated: 2023-12-26T12:08:20.540Z
@@ -91,50 +91,91 @@ Calling `nix-build` will output a store path and a symbolic link to it called `r
 
 ### A `make` project
 
-> TODO build the "hello-world" project
-{.is-warning}
+In this example we build the simple `hello-world` program. All it does it say "Hello world!".
 
+**`setup.sh`**
+
+```bash
+# Add packages to path
+for package in $buildDep ; do
+  export PATH=$PATH:$package/bin
+done
+```
 
 **`builder.sh`**
 
 ```bash
-#!/usr/bin/env bash
+#/usr/bin/env bash
 
-# Copy sources to output folder
-cp -r $src $out/src
+# Do some necessary setup
+source $setup
 
-# Add dependencies to PATH
-export PATH=$gcc/bin/:$make/bin/:$PATH
-
-# $out is writable to us
-# Move there and build the project
+# extract source
+mkdir -p $out/src
 cd $out/src
+tar  xvf $src --strip=1
+
+# compile program
+cd $out/src
+./configure
 make
 
-# Move the built binary to the special bin folder
+# Move compiled program into bin dir
 mkdir $out/bin
-mv build/hello $out/bin/hello
-
-# clean up
-cd $out
-rm -rf src
+mv hello $out/bin
 ```
 
 **default.nix**
 
 ```nix
-derivation {
-  name = "hello"
-  src = ./hello-src;
+{
+  pkgs ? (import <nixpkgs> {})
+}:
+
+builtins.derivation rec {
+  # Required parameters
+  name = "hello-${version}";
   system = "x86_64-linux";
-  builder = ./builder.sh;
+  builder = "${pkgs.bash}/bin/bash";
+  args = [ ./builder.sh ];  # Execute builder script with bash
+
+  # File to help setup
+  setup = ./setup.sh;
+
+  # Retrieving the source package
+  version = "2.12";
+  src = builtins.fetchurl "https://mirror.lyrahosting.com/gnu/hello/hello-${version}.tar.gz";
+
+  # Dependencies for building the package
+  buildDeps = with pkgs; [
+    coreutils
+    gawk
+    gcc
+    gnugrep
+    gnumake
+    gnused
+    gnutar
+    gzip
+  ];
 }
 ```
 
-Calling `nix-build` will give us a `result/` symbolic link to the store path which we can use to call our compiled binary! `result/bin/hello`.
+Calling `nix-build` will give us a `result/` symbolic link to the store path which we can use to call our compiled binary! 
+Run `result/bin/hello` and you should be greeted :)
 
-> TODO Create a `nix-shell` page or section?
-{.is-warning}
+#### enter development environment
+
+Building is all nice and good, but rarely does everything work on the first try.
+To enter an environment with the environment variables set, you can use `nix-shell`.
+
+You should be dropped into a `bash` shell, but you won't have access to `make`, `sed` or any other utils yet!
+That's where the `setup.sh` script comes in. Remember, the path to it is stored in the `setup` environment variable.
+Sourcing it with `source $setup` will now put you in a very similar environment to `nix-build`.
+
+The only thing missing is the source code. It will have been downloaded before entering the shell.
+Run `echo $src` to see where it is.
+
+You can extract it to your working directory with `tar xvf $src`!
 
 ## References
 
