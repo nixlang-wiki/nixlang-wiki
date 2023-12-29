@@ -2,7 +2,7 @@
 title: Derivation
 description: 
 published: false
-date: 2023-12-17T00:53:40.569Z
+date: 2023-12-29T21:01:01.551Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-10T13:41:43.087Z
@@ -20,7 +20,6 @@ Technically, a derivation is just an attribute whose attribute `type` has value 
 	name = "app";
   system = "x86-64_linux";
   builder = "echo 'building!'";
-  more???
 }
 ```
 The `name` is the name of the derivation.  When this derivation is added to the nix store, `name` will be used as part of the file name.  The system defines which architecture this derivation is created for.  The builder is a script(?) with everything needed to build the software from scratch and install it. 
@@ -30,7 +29,7 @@ You will never build derivations from scratch, but it's helpful to understand wh
 ## `derivation` builtin
 The standard library has a function `derivation` to build derivations for you.  It take an attribute set as input with `name`, `system`, and `builder` attributes.  We can explore the returned attribute set after calling this function in the nix REPL.
 ```
-> d = derivation {name="app",; system="x86_64-linux"; builder="build.sh";}
+> d = derivation {name="app"; system="x86_64-linux"; builder="build.sh";}
 > __attrNames d
 ```
 
