@@ -2,7 +2,7 @@
 title: Packaging things with nix
 description: All about how to package different thing using the package manager and build tool
 published: true
-date: 2023-12-29T20:34:43.795Z
+date: 2023-12-29T20:36:36.108Z
 tags: package management, guide, derivation
 editor: markdown
 dateCreated: 2023-12-26T12:08:20.540Z
@@ -18,7 +18,7 @@ Packages in `nix` are also called [derivations](/nix/derivation).
 
 ## The basic derivation
 
-`derivation` is a [builtin][builtins] function that is dumb: the processes behind it are intricate but the general algorith is not. You can read the [reference][derivationRef] if that's more your thing.
+`derivation` is a [builtin][builtins] function that is dumb: the processes behind it are intricate but the general algorithm is not. You can read the [reference][derivationRef] if that's more your thing.
 
  1. take an attribute set (aka a dict in other languages) as input
  1. convert each attribute (key in other languages) in the set to an environment variable
@@ -32,7 +32,7 @@ From this we can glean:
  - the attribute set needs to define a `builder`
  - the attribute set needs to define a list of `outputs`
 
-Well, wouldn't you know it, `builder` is a required attribute! It has to be a string or pat to an executable.
+Well, wouldn't you know it, `builder` is a required attribute! It has to be a string or path to an executable.
 
 `outputs` also exists, but is optional as is has one element by default `"out"`. Every element will be available as an environment variable with a computed value to a path (in the [nix store] aka store path). 
 
