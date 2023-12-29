@@ -2,8 +2,8 @@
 title: Packaging things with nix
 description: All about how to package different thing using the package manager and build tool
 published: true
-date: 2023-12-29T14:27:29.603Z
-tags: package management, guide
+date: 2023-12-29T14:31:53.677Z
+tags: package management, guide, derivation
 editor: markdown
 dateCreated: 2023-12-26T12:08:20.540Z
 ---
