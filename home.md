@@ -1,8 +1,8 @@
 ---
 title: NixLang Wiki
-description: An unofficial, maintained wiki for NixOS
+description: An unofficial, maintained wiki for the Nix ecosystem
 published: true
-date: 2024-01-02T23:46:53.862Z
+date: 2024-01-02T23:47:53.700Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-26T15:53:10.293Z
