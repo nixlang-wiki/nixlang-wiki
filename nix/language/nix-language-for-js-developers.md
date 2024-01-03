@@ -2,7 +2,7 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to lern Nix Language
 published: true
-date: 2024-01-03T03:50:52.081Z
+date: 2024-01-03T03:51:51.756Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
@@ -42,5 +42,5 @@ Learn about Nix Language (sometimes called Nix Expressions), compared to JavaScr
 | Var Def | `var x;` | | Nix has no `var` |
 | Const Def | `const x = 1;` | | Nix has no `const` |
 | Let Def | ` let x = 1;`<br/> `x + 1;` | `let x = 1;`<br/> `in x + 1` |  |
-| | <pre lang="js">let x = 1;<br/>let y = 2;<br/>x + y;</pre> | <pre lang="js">let<br/>  x = 1;<br/>  y = 2;<br/>in x + y</pre> | `let/in` is the nearest Nix<br/>have to a code block |
+| | <pre lang="js">let x = 1;<br/>let y = 2;<br/>x + y;</pre> | <pre lang="js">let<br/>  x = 1;<br/>  y = 2;<br/>in x + y</pre> | `let/in` is the nearest <br/>Nix have to a code block |
 | | | <pre lang="js">let<br/>  x = 1;<br/>  y =<br/>    let<br/>      z = 2;<br/>      w = 3;<br/>    in z + w;<br/>in x + y</pre> | And you can use it almost anywhere |
