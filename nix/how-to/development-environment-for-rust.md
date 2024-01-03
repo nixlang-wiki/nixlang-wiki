@@ -2,7 +2,7 @@
 title: Development Environment for Rust
 description: How to set up a reproducible environment with all of the Rust-related tools you need using a flake
 published: true
-date: 2024-01-03T03:04:42.414Z
+date: 2024-01-03T03:05:25.944Z
 tags: rust devshell
 editor: markdown
 dateCreated: 2024-01-03T03:04:42.414Z
@@ -20,7 +20,7 @@ A devShell [flake][] helps to ensure that everyone working on a project is using
 
 To create a devShell write a `flake.nix` file with outputs of the form `devShells.${system}.default` where `${system}` is whatever system you want to support. The value of `devShells.${system}.default` should be created using the [`pkgs.mkShell`][] Nix function. See the examples below.
 
-[`pkgs.mkShell`]: https://ryantm.github.io/nixpkgs/builders/special/mkshell/
+[`pkgs.mkShell`]: https://nixos.org/manual/nixpkgs/stable/#sec-pkgs-mkShell
 
 Once you have a suitable `flake.nix` make sure that it is committed in version control, or at least staged using `git add`. (It won't work otherwise - Nix flake commands ignore all untracked files.)
 
@@ -68,7 +68,7 @@ You don't have to settle for the Rust version in nixpkgs. There are multiple lib
 
 First, configure the Rust version and toolchain components that you want in a [`rust-toolchain.toml`][] file. Here is an example:
 
-[`rust-toolchain.toml`]: https://rust-lang.github.io/rustup/overrides.html
+[`rust-toolchain.toml`]: https://rust-lang.github.io/rustup/overrides.html#the-toolchain-file
 
 ```toml
 [toolchain]
