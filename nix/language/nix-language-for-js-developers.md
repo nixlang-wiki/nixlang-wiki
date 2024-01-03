@@ -2,7 +2,7 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to lern Nix Language
 published: true
-date: 2024-01-03T01:29:38.213Z
+date: 2024-01-03T01:40:58.155Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
@@ -18,10 +18,14 @@ Learn about Nix Language (sometimes called Nix Expressions), compared to JavaScr
 
 |  | JavaScript | Nix |
 |---|---|---|
-| boolean  | `true`/`false` | `true`/`false` |
-| integer | `5` | `5` |
-| float | `5.7` | `5.7` |
-| string | `"Eelco"` | `"Eelco"` |
-| multiline string |\` `Eelco`<br/>`Dolstra` \` | `''Eelco`<br/>`Dolstra''` |
-| Array | `[ 0, 1, 2]` | `[ 0 1 2]` |
-| Object | `{ a: 1, b: 2}` | `{ a = 1; b = 2; }` |
+| Boolean  | `true`/`false` | `true`/`false` |
+| Integer | `5` | `5` |
+| Float | `3.14` | `3.14` |
+| String | `"Eelco"` | `"Eelco"` |
+| |\` `${name} ${surname}` \` | `"${name} ${surname}"` |
+| |\` `Eelco`<br/>`Dolstra` \` | `''Eelco`<br/>`Dolstra''` |
+| Array | `[ 0, 1, 2 ]` | `[ 0 1 2 ]` |
+| Object | `{ a: 1, "b": 2, "${c}": 3 }` | `{ a = 1; "b" = 2; "${c}" = 3; }` |
+| Lambda Function | `x => x + 1` | `x: x + 1` |
+| | `(x, y) => x + y` | `x: y: x + y` |
+| | `({ x, y }) => x + y` |  ` { x, y }: x + y` |
