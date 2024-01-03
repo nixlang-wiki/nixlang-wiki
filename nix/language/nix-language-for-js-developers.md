@@ -2,7 +2,7 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to lern Nix Language
 published: true
-date: 2024-01-03T03:06:54.664Z
+date: 2024-01-03T03:08:01.917Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
@@ -26,12 +26,12 @@ Learn about Nix Language (sometimes called Nix Expressions), compared to JavaScr
 | Object | `{ a: 1, "b": 2 }` | `{ a = 1; "b" = 2; }` ||
 | | <pre lang="js">{ <br/>  a: { <br/>    b: 2 <br/>  }<br/>}</pre> | <pre lang="js">{ <br/>  a.b = 2; <br/>}</pre> <pre lang="js">{ <br/>  a = { <br/>    b = 2; <br/>  };<br/>}</pre> | Semicolon aren't optional |
 | Function Def | `x => x + 1` | `x: x + 1` ||
-| | `(x, y) => x + y` | | Nix functions can only have one argument |
+| | `(x, y) => x + y` | | Nix functions can<br/> only have one argument |
 | | `x => y => x + y` | `x: y: x + y` | [Currying](https://hughfdjackson.com/javascript/why-curry-helps/) |
-| | `{ x, y } => x + y` |  ` { x, y }: x + y` | Destructuring an object passed as a function parameter |
-| | `{ x, y = 1 } => x + y` |  ` { x, y ? 1 }: x + y` | Destructuring an object passed as a function parameter with default value |
-| | `{ x, y, ...r } => x + y + r.z` |  ` { x, y, ... }@r: x + y + r.z` | Destructuring and rest an object passed as a function parameter |
+| | `{ x, y } => x + y` |  ` { x, y }: x + y` | Destructuring an object<br/> passed as a function parameter |
+| | `{ x, y = 1 } => x + y` |  ` { x, y ? 1 }: x + y` | Destructuring an object<br/> passed as a function parameter with default value |
+| | `{ x, y, ...r } => x + y + r.z` |  ` { x, y, ... }@r: x + y + r.z` | Destructuring and rest<br/> an object passed as a function parameter |
 | Function Call | `myFun(x)` | `myFun x` | |
-| | `myFun(x,y)` | | Nix functions can only have one argument |
+| | `myFun(x,y)` | | Nix functions can<br/> only have one argument |
 | | `myFun(x)(y)` | `myFunc x y` | [Currying](https://hughfdjackson.com/javascript/why-curry-helps/) |
 | | `[myFun(x),myFun(y)]` | `[(myFun x) (myFun y)]` | |
