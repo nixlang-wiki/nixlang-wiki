@@ -2,13 +2,11 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to lern Nix Language
 published: true
-date: 2024-01-03T01:42:17.519Z
+date: 2024-01-03T01:42:55.609Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
 ---
-
-# Nix Language for JavaScript Developers
 
 
 > For packaging JavaScript Package see [packaging](/nix/packaging/)
