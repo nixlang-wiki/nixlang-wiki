@@ -2,7 +2,7 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to lern Nix Language
 published: true
-date: 2024-01-03T03:21:26.974Z
+date: 2024-01-03T03:23:15.930Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
@@ -28,9 +28,9 @@ Learn about Nix Language (sometimes called Nix Expressions), compared to JavaScr
 | Function Def | `x => x + 1` | `x: x + 1` ||
 | | `(x, y) => x + y` | | Nix functions can<br/> only have one argument |
 | | `x => y => x + y` | `x: y: x + y` | [Currying](https://hughfdjackson.com/javascript/why-curry-helps/) |
-| | `{x, y} => x + y` |  ` {x, y}: x + y` | Destructuring an object<br/> passed as a function<br/> parameter |
-| | `{x, y = 1} => x + y` |  ` {x, y ? 1}: x + y` | Destructuring an object<br/> passed as a function<br/> parameter with default value |
-| | `{x, ...r} => x + r.y` |  ` {x, ...}@r: x + r.y` | Destructuring and rest<br/> an object passed as a<br/> function parameter |
+| | `{x, y} => x + y` |  ` {x, y}: x + y` | Destructuring an object<br/> passed as a function<br/> argument |
+| | `{x, y = 1} => x + y` |  ` {x, y ? 1}: x + y` | Destructuring an object<br/> passed as a function<br/> argument with default value |
+| | `{x, ...r} => x + r.y` |  ` {x, ...}@r: x + r.y` | Destructuring and rest<br/> an object passed as a<br/> function argument |
 | | <pre lang="js">x => {<br/>  myFun(x);<br/>  return x;<br/>}</pre> | | Nix doesn't have<br/> function block|
 | Function Call | `myFun(x)` | `myFun x` | |
 | | `myFun(x,y)` | | Nix functions can<br/> only have one argument |
