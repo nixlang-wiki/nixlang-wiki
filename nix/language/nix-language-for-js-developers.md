@@ -2,7 +2,7 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to lern Nix Language
 published: true
-date: 2024-01-03T04:18:40.346Z
+date: 2024-01-03T04:20:09.372Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
@@ -27,7 +27,7 @@ Learn about Nix Language (sometimes called Nix Expressions), compared to JavaScr
 | | | `./someFile` | Some file in current dir |
 | Array | `[ 0, 1, 2 ]` | `[ 0 1 2 ]` | No commas |
 | Object | `{ a: 1, "b": 2 }` | `{ a = 1; "b" = 2; }` | Semicolon aren't optional |
-| | <pre lang="js">{ <br/>  a: { <br/>    b: 2 <br/>  }<br/>}</pre> | <pre lang="js">{ <br/>  a.b = 2; <br/>}</pre> <pre lang="js">{ <br/>  a = { <br/>    b = 2; <br/>  };<br/>}</pre> | |
+| | <pre lang="js">{ <br/>  a: { <br/>    b: 2 <br/>  }<br/>}</pre> | <pre lang="js">{ <br/>  a.b = 2; <br/>}</pre>or <pre lang="js">{ <br/>  a = { <br/>    b = 2; <br/>  };<br/>}</pre> | |
 | Function Def | `x => x + 1` | `x: x + 1` ||
 | | `(x, y) => x + y` | | Nix functions can<br/> only have one argument |
 | | `x => y => x + y` | `x: y: x + y` | [Currying](https://hughfdjackson.com/javascript/why-curry-helps/) |
