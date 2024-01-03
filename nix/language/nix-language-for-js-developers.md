@@ -2,7 +2,7 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to lern Nix Language
 published: true
-date: 2024-01-03T04:54:19.968Z
+date: 2024-01-03T04:54:41.432Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
@@ -51,4 +51,4 @@ Learn about Nix Language (sometimes called Nix Expressions), compared to JavaScr
 | | <pre lang="js">if (x === 1) {<br/>  myFun(0);<br/>  myFun(1);<br/>} else {<br/>  myFun(x);<br/>  myFun(y);<br/>}</pre> | | Nix has no if block |
 | | `if(x === 1) myFun(0);` | | Nix requires else |
 |For Loops| `for(x in a) myFun(x); `| | Nix has no loops |
-| | `a.map (x => x + 1)`|`map (x: x + 1) a`| |
+| | `a.map(x => x + 1)`|`map (x: x + 1) a`| |
