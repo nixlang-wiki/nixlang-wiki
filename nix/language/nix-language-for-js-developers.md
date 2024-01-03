@@ -2,7 +2,7 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to lern Nix Language
 published: true
-date: 2024-01-03T04:07:56.694Z
+date: 2024-01-03T04:08:43.837Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
@@ -44,6 +44,6 @@ Learn about Nix Language (sometimes called Nix Expressions), compared to JavaScr
 | Let Def | ` let x = 1;`<br/> `x + 1;` | `let x = 1;`<br/> `in x + 1` |  |
 | | <pre lang="js">let x = 1;<br/>let y = 2;<br/>x + y;</pre> | <pre lang="js">let<br/>  x = 1;<br/>  y = 2;<br/>in x + y</pre> | `let/in` is the nearest <br/>Nix have to a code block |
 | | | <pre lang="js">let<br/>  x = 1;<br/>  y =<br/>    let<br/>      z = 2;<br/>      w = 3;<br/>    in z + w;<br/>in x + y</pre> | And you can use it<br/> almost anywhere |
-| If | `if (x === 1) myFun(0);` | | Nix requires else |
-| | <pre lang="js">if (x === 1) {<br/>  myFun(0);<br/>} else { <br/>  myFun(x);<br/>}</pre> | <pre lang="nix">if x == 1<br/>then myFun 0<br/>else myFun x</pre> | |
+| If/Else | <pre lang="js">if (x === 1) {<br/>  myFun(0);<br/>} else { <br/>  myFun(x);<br/>}</pre> | <pre lang="nix">if x == 1<br/>then myFun 0<br/>else myFun x</pre> | |
 | | <pre lang="js">if (x === 1) {<br/>  myFun(0);<br/>  myFun(1);<br/>} else {<br/>  myFun(x);<br/>  myFun(y);<br/>}</pre> | | Nix has no if block |
+| | `if (x === 1) myFun(0);` | | Nix requires else |
