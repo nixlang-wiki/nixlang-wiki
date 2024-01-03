@@ -2,7 +2,7 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to lern Nix Language
 published: true
-date: 2024-01-03T03:09:54.272Z
+date: 2024-01-03T03:10:34.757Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
@@ -30,7 +30,7 @@ Learn about Nix Language (sometimes called Nix Expressions), compared to JavaScr
 | | `x => y => x + y` | `x: y: x + y` | [Currying](https://hughfdjackson.com/javascript/why-curry-helps/) |
 | | `{x, y} => x + y` |  ` {x, y}: x + y` | Destructuring an object<br/> passed as a function<br/> parameter |
 | | `{x, y = 1} => x + y` |  ` {x, y ? 1}: x + y` | Destructuring an object<br/> passed as a function<br/> parameter with default value |
-| | `{x, y, ...r} => x + y + r.z` |  ` {x, y, ...}@r: x + y + r.z` | Destructuring and rest<br/> an object passed as a<br/> function parameter |
+| | `{x, y, ...r} => x + r.z` |  ` {x, y, ...}@r: x + r.z` | Destructuring and rest<br/> an object passed as a<br/> function parameter |
 | Function Call | `myFun(x)` | `myFun x` | |
 | | `myFun(x,y)` | | Nix functions can<br/> only have one argument |
 | | `myFun(x)(y)` | `myFunc x y` | [Currying](https://hughfdjackson.com/javascript/why-curry-helps/) |
