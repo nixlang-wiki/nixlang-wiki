@@ -2,7 +2,7 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to lern Nix Language
 published: true
-date: 2024-01-03T03:44:02.730Z
+date: 2024-01-03T03:48:01.659Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
@@ -42,5 +42,5 @@ Learn about Nix Language (sometimes called Nix Expressions), compared to JavaScr
 | var def | `var x;` | | Nix has var |
 | const def | `const x = 1;` | | Nix has no const |
 | let def | ` let x = 1;`<br/> `x + 1;` | `let x = 1;`<br/> `in x + 1` |  |
-| | <pre lang="js">let x = 1;<br/>let y = 2;<br/>x + y;</pre> | <pre lang="js">let<br/>  x = 1;<br/>  y = 2;<br/>in x + y;</pre> | `let/in` is the nearest Nix<br/>have to a code block |
-| | | <pre lang="js">let<br/>  x = 1;<br/>  y = let z = 2; in z;<br/>in x + y;</pre> | but you can use it almost anywhere |
+| | <pre lang="js">let x = 1;<br/>let y = 2;<br/>x + y;</pre> | <pre lang="js">let<br/>  x = 1;<br/>  y = 2;<br/>in x + y</pre> | `let/in` is the nearest Nix<br/>have to a code block |
+| | | <pre lang="js">let<br/>  x = 1;<br/>  y =<br/>    let<br/>      z = 2;<br/>      w = 3;<br/>    in z + w;<br/>in x + y</pre> | but you can use it almost anywhere |
