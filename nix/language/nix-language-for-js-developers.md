@@ -1,8 +1,8 @@
 ---
 title: Nix Language For JavaScript Developer
-description: Leverage your JavaScript knowledge to lern Nix Language
+description: Leverage your JavaScript knowledge to learn Nix Language
 published: true
-date: 2024-01-03T04:54:41.432Z
+date: 2024-01-03T14:33:56.896Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
