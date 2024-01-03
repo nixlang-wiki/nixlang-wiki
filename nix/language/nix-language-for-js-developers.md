@@ -2,7 +2,7 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to lern Nix Language
 published: true
-date: 2024-01-03T01:40:58.155Z
+date: 2024-01-03T01:42:17.519Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
@@ -25,7 +25,7 @@ Learn about Nix Language (sometimes called Nix Expressions), compared to JavaScr
 | |\` `${name} ${surname}` \` | `"${name} ${surname}"` |
 | |\` `Eelco`<br/>`Dolstra` \` | `''Eelco`<br/>`Dolstra''` |
 | Array | `[ 0, 1, 2 ]` | `[ 0 1 2 ]` |
-| Object | `{ a: 1, "b": 2, "${c}": 3 }` | `{ a = 1; "b" = 2; "${c}" = 3; }` |
+| Object | `{ a: 1, "b": 2 }` | `{ a = 1; "b" = 2; }` |
 | Lambda Function | `x => x + 1` | `x: x + 1` |
 | | `(x, y) => x + y` | `x: y: x + y` |
 | | `({ x, y }) => x + y` |  ` { x, y }: x + y` |
