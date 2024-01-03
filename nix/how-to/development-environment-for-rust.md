@@ -2,8 +2,8 @@
 title: Development Environment for Rust
 description: How to set up a reproducible environment with all of the Rust-related tools you need using a flake
 published: true
-date: 2024-01-03T03:05:25.944Z
-tags: rust devshell
+date: 2024-01-03T23:23:14.488Z
+tags: rust, devshell
 editor: markdown
 dateCreated: 2024-01-03T03:04:42.414Z
 ---
