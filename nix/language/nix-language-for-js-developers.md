@@ -2,7 +2,7 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to lern Nix Language
 published: true
-date: 2024-01-03T04:13:15.747Z
+date: 2024-01-03T04:16:04.223Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
@@ -22,6 +22,9 @@ Learn about Nix Language (sometimes called Nix Expressions), compared to JavaScr
 | String | `"Eelco"` | `"Eelco"` ||
 | |\` `${name} ${age}` \` | `"${name} ${toString age}"`<br/>`''${name} ${toString age}''` ||
 | |\` `Eelco`<br/>`Dolstra` \` | `''Eelco`<br/>&nbsp;`  Dolstra''` ||
+| Path | | ./. | Current dir |
+| | | ./.. | Parent dir |
+| | | ./someFile | Some file in current dir |
 | Array | `[ 0, 1, 2 ]` | `[ 0 1 2 ]` | No commas |
 | Object | `{ a: 1, "b": 2 }` | `{ a = 1; "b" = 2; }` | Semicolon aren't optional |
 | | <pre lang="js">{ <br/>  a: { <br/>    b: 2 <br/>  }<br/>}</pre> | <pre lang="js">{ <br/>  a.b = 2; <br/>}</pre> <pre lang="js">{ <br/>  a = { <br/>    b = 2; <br/>  };<br/>}</pre> | |
