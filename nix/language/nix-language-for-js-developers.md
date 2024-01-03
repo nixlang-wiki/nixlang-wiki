@@ -2,7 +2,7 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to lern Nix Language
 published: true
-date: 2024-01-03T02:53:17.001Z
+date: 2024-01-03T02:54:45.050Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
@@ -24,10 +24,10 @@ Learn about Nix Language (sometimes called Nix Expressions), compared to JavaScr
 | |\` `Eelco`<br/>`Dolstra` \` | `''Eelco`<br/>&nbsp;`  Dolstra''` ||
 | Array | `[ 0, 1, 2 ]` | `[ 0 1 2 ]` | No commas |
 | Object | `{ a: 1, "b": 2 }` | `{ a = 1; "b" = 2; }` ||
-| | <pre lang="js">{ <br/>  a: { <br/>    b: 2 <br/>  }<br/>}</pre> | <pre lang="js">{ <br/>  a.b = 2; <br/>}</pre> <pre lang="js">{ <br/>  a = { <br/>    b = 2; <br/>  };<br/>}</pre> | Semicolon is required|
+| | <pre lang="js">{ <br/>  a: { <br/>    b: 2 <br/>  }<br/>}</pre> | <pre lang="js">{ <br/>  a.b = 2; <br/>}</pre> <pre lang="js">{ <br/>  a = { <br/>    b = 2; <br/>  };<br/>}</pre> | Semicolon aren't optional |
 | Function | `x => x + 1` | `x: x + 1` ||
 | | `(x, y) => x + y` | | Nix functions can only have one argument |
 | | `x => y => x + y` | `x: y: x + y` | [Currying](https://hughfdjackson.com/javascript/why-curry-helps/) |
 | | `({ x, y }) => x + y` |  ` { x, y }: x + y` | Destructuring an object passed as a function parameter |
-| | `({ x, y = 1 }) => x + y` |  ` { x, y ? 1 }: x + y` ||
+| | `({ x, y = 1 }) => x + y` |  ` { x, y ? 1 }: x + y` | Destructuring an object passed as a function parameter with default value |
 | | `({ x, y, ...rest }) => x + y + rest.z` |  ` { x, y, ... }@rest: x + y + rest.z` ||
