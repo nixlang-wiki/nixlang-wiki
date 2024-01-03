@@ -2,7 +2,7 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to lern Nix Language
 published: true
-date: 2024-01-03T02:00:46.300Z
+date: 2024-01-03T02:02:23.043Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
@@ -20,11 +20,11 @@ Learn about Nix Language (sometimes called Nix Expressions), compared to JavaScr
 | Integer | `5` | `5` ||
 | Float | `3.14` | `3.14` ||
 | String | `"Eelco"` | `"Eelco"` ||
-| |\` `${name} ${surname}` \` | `"${name} ${surname}"` `''${name} ${surname}''` ||
+| |\` `${name} ${surname}` \` | `"${name} ${surname}"`<br/>`''${name} ${surname}''` ||
 | |\` `Eelco`<br/>`Dolstra` \` | `''Eelco`<br/>&nbsp;`  Dolstra''` ||
 | Array | `[ 0, 1, 2 ]` | `[ 0 1 2 ]` ||
 | Object | `{ a: 1, "b": 2 }` | `{ a = 1; "b" = 2; }` ||
-| | <pre lang="js">{ <br/>  a: { <br/>    b: 2 <br/>  }<br/>}</pre> | <pre lang="js">{ <br/>  a = { <br/>    b = 2; <br/>  };<br/>}</pre> or <pre lang="js">{ <br/>  a.b = 2; <br/>}</pre> ||
+| | <pre lang="js">{ <br/>  a: { <br/>    b: 2 <br/>  }<br/>}</pre> | <pre lang="js">{ <br/>  a.b = 2; <br/>}</pre> <pre lang="js">{ <br/>  a = { <br/>    b = 2; <br/>  };<br/>}</pre> ||
 | Lambda Function | `x => x + 1` | `x: x + 1` ||
 | | `(x, y) => x + y` | `x: y: x + y` ||
 | | `({ x, y }) => x + y` |  ` { x, y }: x + y` ||
