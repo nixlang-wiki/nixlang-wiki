@@ -2,7 +2,7 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to lern Nix Language
 published: true
-date: 2024-01-03T03:25:13.760Z
+date: 2024-01-03T03:26:25.058Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
@@ -38,3 +38,4 @@ Learn about Nix Language (sometimes called Nix Expressions), compared to JavaScr
 | | `myFun(myFun(x))` | `myFun (myFun x)` | |
 | | `[myFun(x),myFun(y)]` | `[(myFun x) (myFun y)]` | |
 | | `{ a: myFun(x) }` | `{ a = myFun x; }` | |
+| | `myFun(x => x + 1)` | `myFun (x: x + 1)` | |
