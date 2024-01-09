@@ -2,7 +2,7 @@
 title: Alt New Landing Page
 description: Alternate landing page
 published: true
-date: 2024-01-09T19:44:11.611Z
+date: 2024-01-09T20:18:50.646Z
 tags: wiki, wip
 editor: markdown
 dateCreated: 2024-01-09T19:35:08.637Z
@@ -22,13 +22,32 @@ Further, we'd like to create a broader wiki, and we'd like to open it up to proj
 
 
 Other [Frequently Asked Questions](/faq)?
+<br>
 
+<div style="display: flex; flex-wrap: wrap; flex-start: space-evenly; align-items: flex-start; flex-grow: 4;">
+<div class="landing-item" style="padding-right: 14%;">
+  
 ## How to use the wiki?
 1. Use the search bar to pages by name or by tags
 2. Visit the nix [landscape](https://landscape.nixlang.wiki/?view-mode=card) to find out about nix tooling, infrastructure, documentation and other resources. 
 3. Click on 'Browse' in the sidebar to look through the pages based on their path
+</div>
+  
+<div class="landing-item" style="justify-self: center;">
+  
+## Where to begin?
+[Standalone Nix Setup](/nix/Setup)
+[NixOS Quick Start](/nixos/Quick_Start)
+
+</div>
+</div>
+
+<br>
+
+<div style="display: flex; flex-wrap: wrap; flex-start: space-evenly; align-items: flex-start; flex-grow: 4;">
+<div class="landing-item" style="padding-right: 3%;" >
+  
 ## NixOS News
-   
 - NixCon NA 2024 - Call for Proposals! [Read](https://discourse.nixos.org/t/nixcon-na-2024-call-for-proposals/36491) Announcement
 - NixOS's S3 cost issue "expedited" as efforts enter "phase 1", with a 10k EUR allocated from opencollective. [Read](https://discourse.nixos.org/t/nixos-s3-long-term-resolution-phase-1/36493) Announcement
 - Guix lands in nixpkgs, again, 7 years after being removed! [Read PR](https://github.com/NixOS/nixpkgs/pull/264331)
@@ -36,8 +55,21 @@ Other [Frequently Asked Questions](/faq)?
 - NixOS version 23.11 Released! [Read](https://discourse.nixos.org/t/nixos-23-11-released/36210) Announcement
 - RFC steering committe rotation! [Read](https://discourse.nixos.org/t/rfc-steering-committee-rotation-2023-24) Announcement
 - nixlang.wiki announced! [Read](https://discourse.nixos.org/t/announcing-nixlang-wiki) Announcement
+</div>
 
 
+<div class="landing-item">
+  
+## Learning resources
+
+The official NixOS learning resource: https://nix.dev/
+Determinate Systems' zero-to-nix: https://zero-to-nix.com/
+On Nix's Language: https://tales.mbivert.com/on-nix-language/
+NixOS & Flakes Book: https://nixos-and-flakes.thiscute.world/
+NixOS in Production: https://leanpub.com/nixos-in-production
+Wombat’s Book of Nix: https://mhwombat.codeberg.page/nix-book/
+</div>
+</div>
 
 
 ## Want to contribute?
