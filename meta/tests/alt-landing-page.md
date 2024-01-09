@@ -2,7 +2,7 @@
 title: Alt New Landing Page
 description: Alternate landing page
 published: true
-date: 2024-01-09T20:18:50.646Z
+date: 2024-01-09T20:21:07.124Z
 tags: wiki, wip
 editor: markdown
 dateCreated: 2024-01-09T19:35:08.637Z
@@ -32,14 +32,16 @@ Other [Frequently Asked Questions](/faq)?
 2. Visit the nix [landscape](https://landscape.nixlang.wiki/?view-mode=card) to find out about nix tooling, infrastructure, documentation and other resources. 
 3. Click on 'Browse' in the sidebar to look through the pages based on their path
 </div>
-  
-<div class="landing-item" style="justify-self: center;">
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: center; flex-grow: 4;">
+<div class="landing-item">
   
 ## Where to begin?
 [Standalone Nix Setup](/nix/Setup)
 [NixOS Quick Start](/nixos/Quick_Start)
 
 </div>
+</div> 
 </div>
 
 <br>
@@ -57,7 +59,7 @@ Other [Frequently Asked Questions](/faq)?
 - nixlang.wiki announced! [Read](https://discourse.nixos.org/t/announcing-nixlang-wiki) Announcement
 </div>
 
-
+<div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: center; flex-grow: 4;">
 <div class="landing-item">
   
 ## Learning resources
@@ -68,6 +70,7 @@ On Nix's Language: https://tales.mbivert.com/on-nix-language/
 NixOS & Flakes Book: https://nixos-and-flakes.thiscute.world/
 NixOS in Production: https://leanpub.com/nixos-in-production
 Wombat’s Book of Nix: https://mhwombat.codeberg.page/nix-book/
+</div>
 </div>
 </div>
 
