@@ -1,8 +1,8 @@
 ---
-title: Landing Page
+title: Alt New Landing Page
 description: Alternate landing page
 published: true
-date: 2024-01-09T19:35:08.637Z
+date: 2024-01-09T19:44:11.611Z
 tags: wiki, wip
 editor: markdown
 dateCreated: 2024-01-09T19:35:08.637Z
@@ -10,17 +10,6 @@ dateCreated: 2024-01-09T19:35:08.637Z
 
 # Welcome to nixlang.wiki
 ![nixlang-header-crop2.jpg](/nixlang-header-crop2.jpg)
-
-
-
-## Structure
-```mermaid
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
-```
 
 ## Why the new wiki?
 Well, for starters, our understanding is that https://nixos.wiki isn't getting updated anymore. We've heard various rumors about the reasons for this being the case, and while we find them concerning, we'd feel it was in bad taste to share them publicly. 
