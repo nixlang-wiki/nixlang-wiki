@@ -2,7 +2,7 @@
 title: Alt New Landing Page
 description: Alternate landing page
 published: true
-date: 2024-01-09T20:55:05.830Z
+date: 2024-01-09T21:00:03.798Z
 tags: wiki, wip
 editor: markdown
 dateCreated: 2024-01-09T19:35:08.637Z
@@ -34,7 +34,7 @@ Other [Frequently Asked Questions](/faq)?
 [NixOS Quick Start](/nixos/Quick_Start)
 
 
-## Learning resources
+## Other learning resources
 The official NixOS learning resource: https://nix.dev/
 Determinate Systems' zero-to-nix: https://zero-to-nix.com/
 On Nix's Language: https://tales.mbivert.com/on-nix-language/
@@ -42,7 +42,14 @@ NixOS & Flakes Book: https://nixos-and-flakes.thiscute.world/
 NixOS in Production: https://leanpub.com/nixos-in-production
 Wombat’s Book of Nix: https://mhwombat.codeberg.page/nix-book/
 
-## NixOS News
+
+## NixOS documentation
+The Nix manual: https://nixos.org/manual/nix/stable/
+The NixOS manual: https://nixos.org/manual/nixos/stable/
+The Nixpkgs manual: https://nixos.org/manual/nixpkgs/stable/
+
+
+## NixOS news
 - NixCon NA 2024 - Call for Proposals! [Read](https://discourse.nixos.org/t/nixcon-na-2024-call-for-proposals/36491) Announcement
 - NixOS's S3 cost issue "expedited" as efforts enter "phase 1", with a 10k EUR allocated from opencollective. [Read](https://discourse.nixos.org/t/nixos-s3-long-term-resolution-phase-1/36493) Announcement
 - Guix lands in nixpkgs, again, 7 years after being removed! [Read PR](https://github.com/NixOS/nixpkgs/pull/264331)
@@ -50,8 +57,6 @@ Wombat’s Book of Nix: https://mhwombat.codeberg.page/nix-book/
 - NixOS version 23.11 Released! [Read](https://discourse.nixos.org/t/nixos-23-11-released/36210) Announcement
 - RFC steering committe rotation! [Read](https://discourse.nixos.org/t/rfc-steering-committee-rotation-2023-24) Announcement
 - nixlang.wiki announced! [Read](https://discourse.nixos.org/t/announcing-nixlang-wiki) Announcement
-
-
 
 
 ## Want to contribute?
