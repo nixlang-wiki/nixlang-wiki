@@ -2,7 +2,7 @@
 title: Alt New Landing Page
 description: Alternate landing page
 published: true
-date: 2024-01-10T17:50:29.985Z
+date: 2024-01-10T17:51:40.004Z
 tags: wiki, wip
 editor: markdown
 dateCreated: 2024-01-09T19:35:08.637Z
@@ -23,6 +23,7 @@ nix/packaging/index -> change the path to just be nix/packaging
 **Maybe:**
 move *experimental nix features* into nix/flakes
 move nix language and nixpkgs info to the *folder page*(idk what to call it) - nixlang.wiki/en/nix
+
 
 <div style="justify-self: center; margin: 0 auto">
   
