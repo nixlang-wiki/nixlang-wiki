@@ -2,7 +2,7 @@
 title: Alt New Landing Page
 description: Alternate landing page
 published: true
-date: 2024-01-10T17:53:52.332Z
+date: 2024-01-10T18:56:47.180Z
 tags: wiki, wip
 editor: markdown
 dateCreated: 2024-01-09T19:35:08.637Z
@@ -26,8 +26,6 @@ move nix language and nixpkgs info to the *folder page*(idk what to call it) - n
 green - new folder
 purple - maybe remove, move/merge info somewhere else 
 
-<div style="justify-self: center; margin: 0 auto">
-  
 ```plantuml
 @startmindmap
 !theme plain
@@ -76,7 +74,7 @@ mindmapDiagram {
  * nixos
 @endmindmap
 ```
-</div>
+
 
 ## Why the new wiki?
 Well, for starters, our understanding is that https://nixos.wiki isn't getting updated anymore. We've heard various rumors about the reasons for this being the case, and while we find them concerning, we'd feel it was in bad taste to share them publicly. 
@@ -147,3 +145,16 @@ The Nixpkgs manual: https://nixos.org/manual/nixpkgs/stable/
 <a href="https://matrix.to/#/#nixlangwiki:gitter.im"><img alt="Gitter" src="https://img.shields.io/gitter/room/eza-community/eza?logo=element&link=https%3A%2F%2Fapp.gitter.im%2F%23%2Froom%2F%23eza%3Agitter.im&link=Gitter%20matrix%20room%20for%20Eza" width=160></a>
 </div>
 </div>
+
+
+
+---
+
+```mermaid
+graph LR;
+    wiki((Wiki))-->meta([meta]); click meta "https://nixlang.wiki/en/meta";
+    wiki-->nix([nix]); click nix "https://nixlang.wiki/en/nix";
+    wiki-->nixos([nixos]); click nixos "https://nixlang.wiki/en/nixos";
+    wiki-->projects([projects]); click projects "https://nixlang.wiki/projects";
+    wiki-->unix([unix]); click unix "https://nixlang.wiki/en/unix"
+```
