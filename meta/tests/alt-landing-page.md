@@ -2,7 +2,7 @@
 title: Alt New Landing Page
 description: Alternate landing page
 published: true
-date: 2024-01-09T21:00:03.798Z
+date: 2024-01-10T17:50:29.985Z
 tags: wiki, wip
 editor: markdown
 dateCreated: 2024-01-09T19:35:08.637Z
@@ -10,6 +10,71 @@ dateCreated: 2024-01-09T19:35:08.637Z
 
 # Welcome to nixlang.wiki
 ![nixlang-header-crop2.jpg](/nixlang-header-crop2.jpg)
+
+> green - new folder
+> purple - maybe remove, move/merge info somewhere else 
+{.is-info}
+## Proposed changes
+I think the current structure of the wiki is quite chaotic. I've made a graph of what I think would be optimal(just nix for now). What do you think?
+
+
+nix/packaging/index -> change the path to just be nix/packaging
+
+**Maybe:**
+move *experimental nix features* into nix/flakes
+move nix language and nixpkgs info to the *folder page*(idk what to call it) - nixlang.wiki/en/nix
+
+<div style="justify-self: center; margin: 0 auto">
+  
+```plantuml
+@startmindmap
+!theme plain
+skinparam backgroundcolor transparent
+<style>
+mindmapDiagram {
+  .green * {
+    BackgroundColor lightgreen
+  }
+  .blue * {
+    BackgroundColor lightblue
+  }
+  .purple * {
+    BackgroundColor #9b4be5
+  }
+}
+</style>
+* wiki
+ * nix
+  * how-to
+   *_ experimental nix features*
+   *_ garbage collection - renamed
+   *_ pinning packages 
+   *_ patching
+  * development <<green>>
+   *_ rust - renamed
+   *_ kernel - renamed
+  * packaging
+   *_ packaging things with nix
+   *_ command completions - renamed
+   *_ passthrough tests
+  * commands <<green>>
+   *_ nix develop
+   *_ nix hash
+   *_ nix run
+  * language <<purple>>
+   *_ nix language
+   *_ comparison with javascript - renamed
+  * nixpkgs <<purple>>
+  *_ derivation
+  *_ flakes
+  *_ home manager
+  *_ setup
+  
+  
+ * nixos
+@endmindmap
+```
+</div>
 
 ## Why the new wiki?
 Well, for starters, our understanding is that https://nixos.wiki isn't getting updated anymore. We've heard various rumors about the reasons for this being the case, and while we find them concerning, we'd feel it was in bad taste to share them publicly. 
@@ -58,6 +123,9 @@ The Nixpkgs manual: https://nixos.org/manual/nixpkgs/stable/
 - RFC steering committe rotation! [Read](https://discourse.nixos.org/t/rfc-steering-committee-rotation-2023-24) Announcement
 - nixlang.wiki announced! [Read](https://discourse.nixos.org/t/announcing-nixlang-wiki) Announcement
 
+##  Recently added
+> If you add a new page put a link, short description here. Maybe this can be automated somehow? Like showing the 10 most recent pages would be cool
+{.is-warning}
 
 ## Want to contribute?
 <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: center; flex-grow: 4;">
