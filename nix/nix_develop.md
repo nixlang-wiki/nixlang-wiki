@@ -1,9 +1,9 @@
 ---
-title: Nix Develop
+title: nix develop
 description: 
 published: true
-date: 2023-12-06T18:33:31.865Z
-tags: 
+date: 2024-01-10T16:04:46.840Z
+tags: commands
 editor: markdown
 dateCreated: 2023-11-30T06:49:03.256Z
 ---
