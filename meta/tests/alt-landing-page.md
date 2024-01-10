@@ -2,7 +2,7 @@
 title: Alt New Landing Page
 description: Alternate landing page
 published: true
-date: 2024-01-10T17:51:40.004Z
+date: 2024-01-10T17:53:52.332Z
 tags: wiki, wip
 editor: markdown
 dateCreated: 2024-01-09T19:35:08.637Z
@@ -11,9 +11,7 @@ dateCreated: 2024-01-09T19:35:08.637Z
 # Welcome to nixlang.wiki
 ![nixlang-header-crop2.jpg](/nixlang-header-crop2.jpg)
 
-> green - new folder
-> purple - maybe remove, move/merge info somewhere else 
-{.is-info}
+
 ## Proposed changes
 I think the current structure of the wiki is quite chaotic. I've made a graph of what I think would be optimal(just nix for now). What do you think?
 
@@ -24,6 +22,9 @@ nix/packaging/index -> change the path to just be nix/packaging
 move *experimental nix features* into nix/flakes
 move nix language and nixpkgs info to the *folder page*(idk what to call it) - nixlang.wiki/en/nix
 
+**Color meaning:**
+green - new folder
+purple - maybe remove, move/merge info somewhere else 
 
 <div style="justify-self: center; margin: 0 auto">
   
