@@ -39,7 +39,7 @@ Set up a `home.nix` file for managing installed programs and dotfiles: [home-man
 
 Used to set global nix settings
 
-For example, use this if you are using a stable version of Nix, and want to enable [flakes](/nix/Flakes):
+For example, use this if you are using a stable version of Nix, and want to enable [flakes](/nix/flakes):
 
 ``` conf
 extra-experimental-features = nix-command flakes
