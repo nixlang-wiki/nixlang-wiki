@@ -12,7 +12,7 @@ dateCreated: 2023-12-22T21:44:04.837Z
 
 aka installing specific package versions.
 
-In this how-to, we explain why package pinning is a thing and how to pin firefox version `101.0.1` from [nixpkgs](/nix/nixpkgs).
+In this how-to, we explain why package pinning is a thing and how to pin firefox version `101.0.1` from nixpkgs.
 
 ## Context
 
