@@ -19,7 +19,7 @@ The category contains information about using nix and doing things with it, like
 ## Nix language
 
 The nix language is its functional, domain specific language.
-To play around, you can use the `nix repl` on your computer.
+To play around with it, you can use `nix repl` on your computer.
 
 **Where to learn it?**
 
@@ -60,5 +60,5 @@ aka the [nix package index](https://github.com/nixos/nixpkgs). It's a monorepo t
 
 One can search for existing packages and NixOS options using https://search.nixos.org .
 
-
+If you can't find the package you're looking for in nixpkgs, you can try looking in the [nix user repository](https://nur.nix-community.org/) or some other alternate package repository listed in the [landscape](https://landscape.nixlang.wiki/?view-mode=card&group=All+categories#Infrastructure/Repositories), before writing your own [derivation](/nix/derivation) for it.
 
