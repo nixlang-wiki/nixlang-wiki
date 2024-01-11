@@ -10,13 +10,13 @@ dateCreated: 2024-01-03T03:04:42.414Z
 
 # Development Environment for Rust
 
-> Requires [flakes](/nix/Flakes) to be enabled.
+> Requires [flakes](/nix/flakes) to be enabled.
 {.is-warning}
 
 A devShell [flake][] helps to ensure that everyone working on a project is using the same Rust toolchain version with the same selection of toolchain components. You can also do this with [rustup][]; but the advantage of using a Nix flake is that Nix is not limited to Rust-specific programs so you can also get locked versions of any other software packages that are useful for your project.
 
 [rustup]: https://rust-lang.github.io/rustup/
-[flake]: /nix/Flakes
+[flake]: /nix/flakes
 
 To create a devShell write a `flake.nix` file with outputs of the form `devShells.${system}.default` where `${system}` is whatever system you want to support. The value of `devShells.${system}.default` should be created using the [`pkgs.mkShell`][] Nix function. See the examples below.
 
@@ -26,7 +26,7 @@ Once you have a suitable `flake.nix` make sure that it is committed in version c
 
 Then you can run `nix develop` in the same directory to enter a shell which has the declared development environment set up. Or to apply the development automatically when you `cd` to a project directory you can set up `direnv`. See [Effortless dev environments with Nix and direnv](https://determinate.systems/posts/nix-direnv).
 
-For more details on using devShells generally see [Nix Develop](/nix/nix_develop).
+For more details on using devShells generally see [Nix Develop](/nix/commands/develop).
 
 ## Minimal Example
 
