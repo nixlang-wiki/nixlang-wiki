@@ -2,7 +2,7 @@
 title: Developing Kernel Modules with Nix
 description: 
 published: true
-date: 2023-11-27T20:25:42.762Z
+date: 2024-01-11T14:30:11.357Z
 tags: 
 editor: markdown
 dateCreated: 2023-11-27T11:43:52.704Z
