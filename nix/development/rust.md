@@ -26,7 +26,7 @@ Once you have a suitable `flake.nix` make sure that it is committed in version c
 
 Then you can run `nix develop` in the same directory to enter a shell which has the declared development environment set up. Or to apply the development automatically when you `cd` to a project directory you can set up `direnv`. See [Effortless dev environments with Nix and direnv](https://determinate.systems/posts/nix-direnv).
 
-For more details on using devShells generally see [Nix Develop](/nix/commands/develop).
+For more details on using devShells generally see [Nix Develop](/nix/commands/nix-develop).
 
 ## Minimal Example
 
