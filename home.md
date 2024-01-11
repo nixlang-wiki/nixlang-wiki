@@ -12,11 +12,11 @@ dateCreated: 2023-11-26T15:53:10.293Z
 ![nixlang-header-crop2.jpg](/nixlang-header-crop2.jpg)
 
 ## Why the new wiki?
-Well, for starters, our understanding is that https://nixos.wiki isn't getting updated anymore. We've heard various rumors about the reasons for this being the case, and while we find them concerning, we'd feel it was in bad taste to share them publicly. 
+Well, for starters, our understanding is that https://nixos.wiki isn't getting updated anymore. We've heard various rumors about the reasons for this being the case, and while we find them concerning, we'd feel it was in bad taste to share them publicly. nixos.wiki outlines the rather bumpy [history of NixOS wikis](https://nixos.wiki/wiki/NixOS_Wiki:History).
 
 Suffice to say, it seems necessary to create a new active wiki.
 
-Part of our goals is also to make this wiki easy to fork, which is why we keep a git repo of all articles. This is to help make the wiki less centralized, and more independent.
+Part of our goals is also to make this wiki easy to fork, which is why we keep a [git repo]((https://github.com/nixlang-wiki/nixlang-wiki) of all articles. This is to help make the wiki less centralized, and more independent.
 
 Further, we'd like to create a broader wiki, and we'd like to open it up to projects that share our values (see [project category explanation](/projects/info) for more).
 
@@ -27,12 +27,10 @@ Other [Frequently Asked Questions](/faq)?
 1. Use the search bar to pages by name or by tags
 2. Visit the nix [landscape](https://landscape.nixlang.wiki/?view-mode=card) to find out about nix tooling, infrastructure, documentation and other resources. 
 3. Click on 'Browse' in the sidebar to look through the pages based on their path
-4. Download it. Currently, nixlang.wiki is automatically backed up to a [git repository](https://github.com/nixlang-wiki/nixlang-wiki) every five minutes. This has the dual purpose of making it a little less centralized, and making it easier to read/write in your terminal.
 
 
 ## Where to begin?
-[Standalone Nix Setup](/nix/Setup)
-
+[Standalone Nix Setup](/nix/setup)
 [NixOS Quick Start](/nixos/Quick_Start)
 
 
@@ -82,7 +80,7 @@ Wombat’s Book of Nix: https://mhwombat.codeberg.page/nix-book/
 </div>
 
 ```mermaid
-graph LR;
+graph TD;
     wiki((Wiki))-->meta([meta]); click meta "https://nixlang.wiki/en/meta";
     wiki-->nix([nix]); click nix "https://nixlang.wiki/en/nix";
     wiki-->nixos([nixos]); click nixos "https://nixlang.wiki/en/nixos";
