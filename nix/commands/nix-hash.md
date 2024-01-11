@@ -9,7 +9,7 @@ dateCreated: 2023-11-30T17:37:34.846Z
 ---
 
 # Nix Hash
-> `nix hash` requires [enabling flakes](/nix/experimental_features)
+> `nix hash` requires [enabling flakes](/nix/how-to/experimental-features)
 {.is-warning}
 
 The `nix hash` subcommand exists to calcualte the cryptographic hash of paths and convert between them.
