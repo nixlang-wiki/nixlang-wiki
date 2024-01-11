@@ -10,7 +10,7 @@ dateCreated: 2023-11-30T06:49:03.256Z
 
 # Nix Develop
 
-> Requires [flakes](/nix/Flakes) to be enabled.
+> Requires [flakes](/nix/flakes) to be enabled.
 {.is-warning}
 
 `nix develop` sets up and activates a development environment with a flake.  Create a `flake.nix` file in a project directory, then run `nix develop`.
