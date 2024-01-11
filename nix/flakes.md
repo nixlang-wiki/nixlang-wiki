@@ -19,4 +19,4 @@ An input could e.g. be nixpkgs, and an output could e.g. be a nixos configuratio
 Flakes can also take other flakes as inputs.
 
 ## See Also
-- [Experimental Features](/nix/experimental_features)
+- [Experimental Features](/nix/how-to/experimental-features)
