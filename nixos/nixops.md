@@ -2,7 +2,7 @@
 title: Nixops
 description: NixOS Deployment Tool
 published: true
-date: 2023-12-06T12:13:55.167Z
+date: 2024-01-24T14:10:25.455Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-06T12:13:55.167Z
@@ -37,11 +37,18 @@ The flake I've been using for deploying my nixops setup is the following:
         packages = [nixops.packages.x86_64-linux.default];
       };
 
+    # An attribute set containing some machines
     nixopsConfigurations.default = {
       inherit nixpkgs;
+      #My first machine I want to deploy
       vps = {
         imports = [./website/configuration.nix];
         deployment.targetHost = "192.0.66.168";
+      };
+      # My second machine I want to deploy
+      otherMachine = {
+        imports = [ ./buildserver/default.nix ];
+        deployment.targetHost = "ihimlen.dk";
       };
       network.storage.memory = {};
     };
