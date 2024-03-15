@@ -2,7 +2,7 @@
 title: Nix Language For JavaScript Developer
 description: Leverage your JavaScript knowledge to learn Nix Language
 published: true
-date: 2024-01-03T14:34:47.868Z
+date: 2024-03-15T02:46:36.739Z
 tags: language
 editor: markdown
 dateCreated: 2024-01-03T00:37:57.898Z
@@ -20,7 +20,7 @@ Learn about Nix Language (sometimes called Nix Expressions), comparing it to Jav
 | Integer | `5` | `5` ||
 | Float | `3.14` | `3.14` ||
 | String | `"Eelco"` | `"Eelco"` ||
-| |\` `${name} ${age}` \` | `"${name} ${toString age}"`<br/>`''${name} ${toString age}''` ||
+| |\` `${name} ${age}` \` | `"${name} ${toString age}"`<br/>or<br/>`''${name} ${toString age}''` ||
 | |\` `Eelco`<br/>`Dolstra` \` | `''Eelco`<br/>&nbsp;`  Dolstra''` ||
 | Path | | `./.` | Current dir |
 | | | `./..` | Parent dir |
