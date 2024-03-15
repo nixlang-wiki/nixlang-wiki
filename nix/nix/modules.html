@@ -2,10 +2,105 @@
 title: why nix modules
 description: Why it exists and what problems it solves.
 published: true
-date: 2024-03-15T02:52:29.995Z
+date: 2024-03-15T08:31:49.374Z
 tags: modules
 editor: ckeditor
 dateCreated: 2024-03-15T02:52:29.995Z
 -->
 
-<p>WIP</p>
+<h1>Why Nix Modules</h1>
+<p>TL;DR:: To specify expected file content and write correct output from it.</p>
+<h2>Tweaking by configuration</h2>
+<p>Since the first human invention, there were ways somehow to change it to better fit user requirements, means if the first <a href="https://en.wikipedia.org/wiki/Timeline_of_historic_inventions#Paleolithic">Full Stack 10x Stone Tool Engineer</a>, creates any tool, whoever had that tool would try to adapt it to whatever task was at his hand.</p>
+<p>After that, with first crops, humans configured the outcome of a year-long job, by choosing seeds, soil, etc. Even far from current computers, 2nd century BC <a href="https://en.wikipedia.org/wiki/Antikythera_mechanism">Antikythera mechanism</a> had different configurations.</p>
+<p>The same happens to modern computer, where operational system are configurations to make them more appropriate to different jobs. Software, running on that operational system, are more configurations to do different tasks. And even software can be configured to different users and needs.&nbsp;</p>
+<p>Usually this configuration is stored in computer memory and can be tweaked with the help of text editors. But there are tools to create them, tools to validate them, and tools to move them to other computers.</p>
+<h2>Actual simplest example</h2>
+<p>When multiple computers tried to communicate with each other, the first approach was sending data to everyone. The second approach was, define some kind of address that the computer could understand, knowing who had to receive that message.</p>
+<p>The problem was that the address a computer could understand was too long to average human remember. To solve that now there are both address, <i>domain</i> for humans and <i>IP</i> for computer<i>.</i> The remains of this era is file <i>/etc/hosts</i> on Unix/Linux/Mac.</p>
+<p>It looks something like this:</p>
+<pre><code class="language-plaintext">127.0.0.1 localhost
+192.0.0.1 otherhost</code></pre>
+<p>Whenever a user wants to communicate with the one nominated as localhost, the computer uses the 127.0.0.1 IP.</p>
+<h2>Simple but long</h2>
+<p>With popularization and miniaturization of computers, it would not be hard to have that file with a long list of address.</p>
+<p>To better organize it, a common practice is to cut this files in group related pieces like<i> mamachines.txt</i>, <i>childstuff.txt</i>, <i>dadysgems.txt</i> and <i>shared.txt</i>. And join them all back in single file <i>/etc/hosts.</i></p>
+<p>The following Nix file could join them all.</p>
+<pre><code class="language-plaintext">builtins.toFile "hosts" ''
+  ${builtins.readFile ./mamachines.txt}
+  ${builtins.readFile ./childstuff.txt}
+  ${builtins.readFile ./dadysgems.txt}
+  ${builtins.readFile ./shared.txt}
+''</code></pre>
+<p>Making Nix, a text template engine for writing any config file, Nix Modules inherit this, because they are just nix file with some formalities.</p>
+<h2>Simply repeat</h2>
+<p>As society grows, whenever there are requirements to work with teams, sharing information becomes important. In the previous example could be another machine requiring this same information.&nbsp;</p>
+<p>To prevent rework and misalignment. It is a common practice to store those files in a shared place, that can be any http server or git server.</p>
+<p>The following could be used for that</p>
+<pre><code class="language-plaintext">let
+  src = builtins.fetchGit {
+    url = "git@github.com:my-house/hosts.git";
+    ref = "master";
+    rev = "adab8b916a45068c044658c4158d81878f9ed1c3"; #that may fail if rev won't match
+  };
+  hosts = import $src/hosts.nix
+in hosts</code></pre>
+<p>Now Nix is also a good distribution tool, for files of any kind like bash scripts, java properties, YAML, JSON, etc, Nix Modules inherit this too.</p>
+<p>Using some tool like git also add backups and all other benefits of a <a href="https://en.wikipedia.org/wiki/Version_control">version control</a>.</p>
+<h2>Simple isn't <strong>foolproof</strong></h2>
+<p>If a <a href="https://theoatmeal.com/comics/volcano_name">cat</a> decides to walk at the <a href="https://en.wikipedia.org/wiki/Domain_Name_System#History">John Postel</a> keyboard, the odds are the <i>IP</i> or <i>domain</i> won't follow the naming rules, then strange things would happen, like no donuts for anybody, <a href="https://www.techopedia.com/definition/1987/fail-whale">flying whales</a>, and <a href="https://inzonedesign.com/blog/28-cleverly-funny-creative-404-error-pages/">so on</a>.</p>
+<p>To make it worse, depending on fallback systems, there would be no way to contact help, or research the solution in the <s>ARAP</s>net.</p>
+<p>The fact is that there are so many rules for the file, for names, that even humans and computers can create an invalid file or entry.</p>
+<p>To prevent from this kind not only for hosts but for any config file, Nix Modules can be used to:</p>
+<ol>
+  <li>Define the expected input rules;</li>
+  <li>Define sane <a href="https://blog.codinghorror.com/the-power-of-defaults/">defaults</a>;</li>
+  <li>Make a template for the output;</li>
+  <li>Let others reuse it, and <a href="https://en.wikipedia.org/wiki/Method_overriding">override</a> it,&nbsp;</li>
+  <li>Document the options and rules;</li>
+</ol>
+<h2>Flavors</h2>
+<p>Nix Modules have mostly all are need to create config files of any kind. But there are some specific tools that can be used to specific scenarios.</p>
+<ul>
+  <li>Linux Configuration<ul>
+      <li>NixOS</li>
+      <li>NixNG</li>
+      <li>System Manager</li>
+      <li>WireNix</li>
+    </ul>
+  </li>
+  <li>Containers<ul>
+      <li>Nix2Containers</li>
+    </ul>
+  </li>
+  <li>Android<ul>
+      <li>Nix-On-Droid</li>
+    </ul>
+  </li>
+  <li>MacOS<ul>
+      <li>NixDarvin</li>
+    </ul>
+  </li>
+  <li>User Configuration<ul>
+      <li>Home Manager</li>
+    </ul>
+  </li>
+  <li>Cloud<ul>
+      <li>NixOps</li>
+      <li>Terraform-NixOS</li>
+      <li>Terranix</li>
+    </ul>
+  </li>
+  <li>Development Environment<ul>
+      <li>DevEnv</li>
+      <li>DevShell</li>
+      <li>DevBox</li>
+    </ul>
+  </li>
+</ul>
+<p>Those tools help by:</p>
+<ol>
+  <li>Coping or linking the file to correct place;</li>
+  <li>Only change the file if it was valid;</li>
+  <li>They use nix profile feature, enable rollback options.</li>
+</ol>
