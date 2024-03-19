@@ -2,7 +2,7 @@
 title: why nix modules
 description: Why it exists and what problems it solves.
 published: true
-date: 2024-03-15T08:31:49.374Z
+date: 2024-03-19T22:45:27.947Z
 tags: modules
 editor: ckeditor
 dateCreated: 2024-03-15T02:52:29.995Z
@@ -51,16 +51,16 @@ in hosts</code></pre>
 <p>If a <a href="https://theoatmeal.com/comics/volcano_name">cat</a> decides to walk at the <a href="https://en.wikipedia.org/wiki/Domain_Name_System#History">John Postel</a> keyboard, the odds are the <i>IP</i> or <i>domain</i> won't follow the naming rules, then strange things would happen, like no donuts for anybody, <a href="https://www.techopedia.com/definition/1987/fail-whale">flying whales</a>, and <a href="https://inzonedesign.com/blog/28-cleverly-funny-creative-404-error-pages/">so on</a>.</p>
 <p>To make it worse, depending on fallback systems, there would be no way to contact help, or research the solution in the <s>ARAP</s>net.</p>
 <p>The fact is that there are so many rules for the file, for names, that even humans and computers can create an invalid file or entry.</p>
-<p>To prevent from this kind not only for hosts but for any config file, Nix Modules can be used to:</p>
+<p>To prevent problems from this kind, not only for hosts but for any config file, Nix Modules can be used to:</p>
 <ol>
   <li>Define the expected input rules;</li>
   <li>Define sane <a href="https://blog.codinghorror.com/the-power-of-defaults/">defaults</a>;</li>
   <li>Make a template for the output;</li>
-  <li>Let others reuse it, and <a href="https://en.wikipedia.org/wiki/Method_overriding">override</a> it,&nbsp;</li>
+  <li>Let others reuse it, and <a href="https://en.wikipedia.org/wiki/Method_overriding">override</a> it,</li>
   <li>Document the options and rules;</li>
 </ol>
 <h2>Flavors</h2>
-<p>Nix Modules have mostly all are need to create config files of any kind. But there are some specific tools that can be used to specific scenarios.</p>
+<p>Nix Modules have mostly all feature to create config files of any kind. But there are some specific tools that use Nix Modules for specific scenarios.</p>
 <ul>
   <li>Linux Configuration<ul>
       <li>NixOS</li>
