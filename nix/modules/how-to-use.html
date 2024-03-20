@@ -1,0 +1,185 @@
+<!--
+title: How To Use Nix Modules
+description: Nix Modules usage
+published: true
+date: 2024-03-20T09:18:58.065Z
+tags: 
+editor: ckeditor
+dateCreated: 2024-03-20T09:18:58.065Z
+-->
+
+<h1>How To Use Nix Modules</h1>
+<p>&nbsp;</p>
+<h2>To configure</h2>
+<p>The easiest to use nix modules, is using an existing tool like, NixOS, HomeManager, DevEnv, DevShell, etc, that comes with predefined modules.</p>
+<p>&nbsp;</p>
+<h3>1º Step: find the tool predefined modules</h3>
+<p>Most of tools provides a page with it's modules options:</p>
+<ul>
+  <li><a href="https://search.nixos.org/options?">NixOS Search</a></li>
+  <li><a href="https://github.com/numtide/system-manager?tab=readme-ov-file#system-manager-using-nix">SystemManager docs</a></li>
+  <li><a href="https://nix-community.github.io/home-manager/options.xhtml">HomeManager docs</a></li>
+  <li><a href="https://devenv.sh/reference/options/">DevEnv docs</a></li>
+  <li><a href="https://numtide.github.io/devshell/modules_schema.html">DevShell docs</a></li>
+  <li>etc…</li>
+</ul>
+<p>&nbsp;</p>
+<h3>2º Step: add it to your module file</h3>
+<p>The simplest nix module has the following structure</p>
+<pre><code class="language-plaintext"># Real example for NixOS
+# The following brackets is an attrset 
+# aka. object in JSON, hashmap in JAVA, dict in Python...
+{
+    networking.hostName = "mynixos";
+}</code></pre>
+<p>Is the same as</p>
+<pre><code class="language-plaintext">{
+    networking = {
+        hostName = "mynixos"; # internal semi-colon are required
+    };                        # internal semi-colon are required
+}                             # external semi-colon aren't allowed</code></pre>
+<p>If someone tries to use <code>some.undefined.cfg</code> with any tool, the configuration will fail, because it wasn't previously defined, same if used <code>networking.hostName</code> in other tools because it's only defined with NixOS. Also, when it has different expected type, because <code>hostName</code> expects a string.</p>
+<p>A more common nix module may look like this:</p>
+<pre><code class="language-plaintext"># This is a function definition
+{           # function arguments
+     pkgs,  # nixpkgs.pkgs to use where option expects a package
+     lib,   # nixpkgs.lib  to use its functions
+     config,# all defined values in modules
+     ...    # makes nix interpreter ignore the other arguments received by this function
+}:        
+            # Nix has no notion of a body;
+		    # Functions in Nix have a single statement, is also the return value
+            # The following brackets is an attrset
+{         
+    networking.hostName = "mynixos"; # real example from NixOS  
+}</code></pre>
+<p>&nbsp;</p>
+<h3>3º Step: Activation</h3>
+<p>All that change will be applied only after tool activation script runs.</p>
+<ul>
+  <li>NixOS has <code>nixos-rebuild switch</code> command;</li>
+  <li>SystemManager has <code>system-manager switch</code> command;</li>
+  <li>HomeManager has <code>home-manager switch</code> command;</li>
+  <li>DevEnv has <code>devenv shell </code>command, but can use <a href="https://direnv.net/">direnv</a>; and</li>
+  <li>DevShell has <code>nix develop</code> command, but can use direnv also.</li>
+  <li>etc…</li>
+</ul>
+<p>&nbsp;</p>
+<h2>To reuse and organize</h2>
+<p>As a programming language, Nix has some ways to reuse values with functions, variables, imports, recursive attrsets, etc. They are out of scope of this page. Check <a href="/nix/language/intro">Nix Language</a> page for more info.</p>
+<p>But Nix Modules has some own ways to import a reuse and organize information:</p>
+<p>&nbsp;</p>
+<h3>Imports</h3>
+<p>imports is a attribute that expects a list (aka. array in JSON) of paths.</p>
+<pre><code class="language-plaintext">{
+    imports = [ 
+    	./currentDirFilePath.nix          # content of file has to be another nix module
+    	./../upperDirFilePath.nix         # ./ is required for Nix knows its a path
+    	./subdirPath/subDirFilePath.nix   # list in Nix has no comma like in other langs
+    ];
+    networking.hostName = "mynixos";
+}</code></pre>
+<p>That way, is possible to split the module in many files.</p>
+<p>Nix modules have a merge system, with the following rules:</p>
+<ol>
+  <li>Two different attrs are merged into a single object<ol>
+      <li>ie <code>networking.useDHCP</code> and <code>networking.hostName</code> will result in&nbsp;<ol>
+          <li><code>{ networking.useDHCP = true; networking.hostName = “mynixos”;}</code>&nbsp;</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Two equal attr fails in the activation<ol>
+      <li>ie: &nbsp;<code>networking.hostName</code> and <code>networking.hostName</code>&nbsp;</li>
+      <li>Exceptions may apply:<ol>
+          <li>if the expected type has a merge defined:<ol>
+              <li><code>lib.types.boolByOr</code> if one value is <code>false</code> and other is <code>true</code>, is merged as <code>true</code></li>
+              <li><code>lib.types.lines</code>, are concatenated by <code>\n</code></li>
+              <li><code>lib.types.commas</code>, are concatenated by <code>,</code></li>
+              <li><code>lib.types.envVars</code>, are concatenated by <code>:&nbsp;</code></li>
+              <li>&nbsp;Other user or tool defined types.</li>
+            </ol>
+          </li>
+          <li>If they have priority<ol>
+              <li><code>lib.mkOverride RANK VAL</code>, override the previous value if it has highest descending rank (1 highest, 1500 lowest)</li>
+              <li><code>lib.mkDefault VAL</code>, same as <code>mkOverride</code> with rank 1500.</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+<p>&nbsp;</p>
+<h3>The config parameter</h3>
+<p>When module is a function, one of its defined parameters is <code>config</code>, it contains any defined value on this and other modules .</p>
+<pre><code class="language-plaintext">{ config, ...}:
+{   
+    networking.hostName = 
+        if config.networking.useDHCP  # reuse the value from another nix module
+        then "mynixos" else "mynixosWithoutDHCP";
+        
+    networking.hosts."127.0.0.1" = [
+    	config.networking.hostName    # reuse the value from the same nix module
+    ];
+}</code></pre>
+<p>&nbsp;</p>
+<h2>To define new options</h2>
+<p>As previously stated, options must be specified before it is available to set, that is done with the <code>options</code> attribute in a module.</p>
+<pre><code class="language-plaintext">{ lib, ...}:
+{
+    options.networking.irrestrictHostName = lib.mkOption {
+    	default     = "nixos";
+    	type        = types.str;
+    	description = lib.mdDoc "Say something fancy";
+    };
+}</code></pre>
+<p>Common types:</p>
+<ul>
+  <li><code>lib.types.bool</code></li>
+  <li><code>lib.types.int</code></li>
+  <li><code>lib.types.float</code></li>
+  <li><code>lib.types.str</code></li>
+  <li><code>lib.types.strMatching</code></li>
+  <li><code>lib.types.lines</code></li>
+  <li><code>lib.types.package</code></li>
+  <li><code>types.listOf</code></li>
+  <li><code>types.attrsOf</code></li>
+  <li><code>types.submodule</code></li>
+</ul>
+<p>Consult the tool documentation types, and the <a href="https://nixos.org/manual/nixos/stable/#sec-option-types">Standard Nix Modules Types</a></p>
+<p>There is a caveat, when <code>options</code> is defined in one module, config also have to be prefixed with <code>config</code>.</p>
+<p>Example:</p>
+<pre><code class="language-plaintext">{ lib, ...}:
+{
+    # imports are always only imports
+    imports = [ ./currentDirFilePath.nix ];
+    
+	# option is always required for option definition
+    options.networking.irrestrictHostName = lib.mkOption {
+    	default     = "nixos";
+    	type        = types.str;
+    	description = lib.mdDoc "Say something fancy";
+    };
+    
+    # `config.` is required when there is an `options.`
+    config.networking.useDHCP = true;
+}</code></pre>
+<p>&nbsp;</p>
+<h2>To create new files with new options</h2>
+<p>Read this page in a different order</p>
+<ul>
+  <li>Define new options</li>
+  <li>Reuse and organize&nbsp;<ul>
+      <li>Config parameter</li>
+    </ul>
+  </li>
+  <li>Configure<ul>
+      <li>Find the tool predefined modules<ul>
+          <li><span class="text-small">Every tool has a different predefined option to file creation</span></li>
+          <li><span class="text-small">ie: </span><a href="https://search.nixos.org/options?channel=23.11&amp;show=environment.etc.%3Cname%3E.target&amp;from=0&amp;size=50&amp;sort=relevance&amp;type=packages&amp;query=environment">environment.etc</a>, &nbsp;<a href="https://nix-community.github.io/home-manager/options.xhtml#opt-home.file">home.file</a>, etc…</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
