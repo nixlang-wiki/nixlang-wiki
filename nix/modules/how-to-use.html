@@ -2,7 +2,7 @@
 title: How To Use Nix Modules
 description: Nix Modules usage
 published: true
-date: 2024-03-20T09:23:58.561Z
+date: 2024-03-20T09:36:18.554Z
 tags: howto, modules
 editor: ckeditor
 dateCreated: 2024-03-20T09:18:58.065Z
@@ -83,21 +83,21 @@ dateCreated: 2024-03-20T09:18:58.065Z
 <p>Nix modules have a merge system, with the following rules:</p>
 <ol>
   <li>Two different attrs are merged into a single object<ol>
-      <li>ie <code>networking.useDHCP</code> and <code>networking.hostName</code> will result in&nbsp;<ol>
-          <li><code>{ networking.useDHCP = true; networking.hostName = “mynixos”;}</code>&nbsp;</li>
+      <li>ie <code>networking.useDHCP</code> and <code>networking.hostName</code> will result in<ol>
+          <li><code>{ networking.useDHCP = true; networking.hostName = “mynixos”;}</code></li>
         </ol>
       </li>
     </ol>
   </li>
   <li>Two equal attr fails in the activation<ol>
-      <li>ie: &nbsp;<code>networking.hostName</code> and <code>networking.hostName</code>&nbsp;</li>
+      <li>ie: &nbsp;<code>networking.hostName</code> and <code>networking.hostName</code></li>
       <li>Exceptions may apply:<ol>
           <li>if the expected type has a merge defined:<ol>
               <li><code>lib.types.boolByOr</code> if one value is <code>false</code> and other is <code>true</code>, is merged as <code>true</code></li>
               <li><code>lib.types.lines</code>, are concatenated by <code>\n</code></li>
               <li><code>lib.types.commas</code>, are concatenated by <code>,</code></li>
               <li><code>lib.types.envVars</code>, are concatenated by <code>:&nbsp;</code></li>
-              <li>&nbsp;Other user or tool defined types.</li>
+              <li>Other user or tool defined types.</li>
             </ol>
           </li>
           <li>If they have priority<ol>
@@ -166,11 +166,11 @@ dateCreated: 2024-03-20T09:18:58.065Z
     config.networking.useDHCP = true;
 }</code></pre>
 <p>&nbsp;</p>
-<h2>To create new files with new options</h2>
+<h2>To create new configuration files with a new option</h2>
 <p>Read this page in a different order</p>
 <ul>
   <li>Define new options</li>
-  <li>Reuse and organize&nbsp;<ul>
+  <li>Reuse and organize<ul>
       <li>Config parameter</li>
     </ul>
   </li>
