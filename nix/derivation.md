@@ -1,8 +1,8 @@
 ---
 title: Derivation
 description: 
-published: false
-date: 2023-12-29T21:01:01.551Z
+published: true
+date: 2024-03-31T21:47:54.790Z
 tags: 
 editor: markdown
 dateCreated: 2023-12-10T13:41:43.087Z
