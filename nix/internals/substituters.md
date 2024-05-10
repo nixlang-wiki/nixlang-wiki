@@ -2,7 +2,7 @@
 title: Substituters
 description: 
 published: true
-date: 2024-05-10T12:32:52.834Z
+date: 2024-05-10T12:37:13.772Z
 tags: internals, store
 editor: markdown
 dateCreated: 2024-05-10T12:14:03.781Z
@@ -82,3 +82,8 @@ Sig: cache.nixos.org-1:+1uovw9mLuQBxrSgngCdzskVr1HLz3M3w/Z9ykP7Un2yTolZNrZ3C1id/
 ```
 
 Using the `URL: ...` the path to the compressed NAR is https://cache.nixos.org/nar/0zyyxzr58s161b35zmky658ziy30xqwavl2n320ivck8g9y99y40.nar.xz
+
+# Useful links
+
+ - [Binary cache substituter: nix Github](https://github.com/NixOS/nix/blob/cb7224a8c2cc3aaee086d1e1ae539d7bb9a68915/doc/manual/src/package-management/binary-cache-substituter.md)
+ - [nar-bridge: tvix implementation of HTTP binary cache](https://github.com/tvlfyi/tvix/tree/canon/nar-bridge)
