@@ -1,0 +1,51 @@
+<!--
+title: Substituters
+description: 
+published: true
+date: 2024-05-10T12:14:03.781Z
+tags: internals, store
+editor: ckeditor
+dateCreated: 2024-05-10T12:14:03.781Z
+-->
+
+<h1>Substituters</h1>
+<p>When building a derivation, it's possible that the outputs may already be available and a lengthy build process can be skipped. Substituters take care of recovering that outputs.</p>
+<blockquote>
+  <p>HELP why are they called “substituters” though?</p>
+</blockquote>
+<p>The builds may be available in many different places (blob storage, remote SFTP server, SSH server, HTTP server, …). Some of the supported substituters are described here including how they work.</p>
+<p><strong>Example: Simple derivation from </strong><a href="https://nixos.org/guides/nix-pills/18-nix-store-paths.html"><strong>nix-pills</strong></a></p>
+<pre><code class="language-plaintext">$ echo mycontent &gt; myfile
+$ nix repl
+nix-repl&gt; derivation { system = "x86_64-linux"; builder = ./myfile; name = "foo"; }
+«derivation /nix/store/y4h73bmrc9ii5bxg6i7ck6hsf5gqv8ck-foo.drv»
+$ nix derivation show /nix/store/y4h73bmrc9ii5bxg6i7ck6hsf5gqv8ck-foo.drv
+{
+  "/nix/store/y4h73bmrc9ii5bxg6i7ck6hsf5gqv8ck-foo.drv": {
+    "outputs": {
+      "out": {
+        "path": "/nix/store/hs0yi5n5nw6micqhy8l1igkbhqdkzqa1-foo"
+      }
+    },
+    "inputSrcs": [
+      "/nix/store/xv2iccirbrvklck36f1g7vldn5v58vck-myfile"
+    ],
+    "inputDrvs": {},
+    "platform": "x86_64-linux",
+    "builder": "/nix/store/xv2iccirbrvklck36f1g7vldn5v58vck-myfile",
+    "args": [],
+    "env": {
+      "builder": "/nix/store/xv2iccirbrvklck36f1g7vldn5v58vck-myfile",
+      "name": "foo",
+      "out": "/nix/store/hs0yi5n5nw6micqhy8l1igkbhqdkzqa1-foo",
+      "system": "x86_64-linux"
+    }
+  }
+}</code></pre>
+<p>This derivation has a single output that will be stored at <code>outputs.out.path</code>: <code>/nix/store/hs0yi5n5nw6micqhy8l1igkbhqdkzqa1-foo</code></p>
+<p>That output is the one we desire to substitute instead of build.</p>
+<h2>HTTP</h2>
+<p>The default cache for nixos is cache.nixos.org . What is ultimately retrieved from the cache is a <strong>N</strong>ix <strong>AR</strong>chive (<code>.nar</code>). See <a href="https://github.com/NixOS/nix/blob/cb7224a8c2cc3aaee086d1e1ae539d7bb9a68915/doc/manual/src/glossary.md">nix glossary</a>.</p>
+<p>First one has to retrieve information about the archive to ensure it's indeed what we want. That information is stored in a <code>.narinfo</code>.</p>
+<p>From the store path <code>/nix/store/$hash-$name</code> e.g <code>/nix/store/hs0yi5n5nw6micqhy8l1igkbhqdkzqa1-foo</code></p>
+<p>on calls <code>https://$HOST/$hash.narinfo</code></p>
